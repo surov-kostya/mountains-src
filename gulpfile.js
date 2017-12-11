@@ -55,6 +55,17 @@ gulp.task('tinypng', function () {
 		.pipe(gulp.dest('./build/assets/images'));
 });
 
+// --------------- FONTS ------------------
+
+var fontgen = require('gulp-fontgen');
+
+gulp.task('fontgen', function() {
+ return gulp.src("src/fonts/*.{ttf,otf}")
+   .pipe(fontgen({
+     dest: "build/asstes/fonts/"
+   }));
+});
+
 // -------------- WEBPACK -----------------
 
 var webpack = require('webpack');
