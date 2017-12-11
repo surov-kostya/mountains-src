@@ -55,15 +55,14 @@ gulp.task('tinypng', function () {
 		.pipe(gulp.dest('./build/assets/images'));
 });
 
-// --------------- FONTS ------------------
+// ------------- SVG SPRITE ---------------
 
-var fontgen = require('gulp-fontgen');
+var svgSprite = require("gulp-svg-sprites");
 
-gulp.task('fontgen', function() {
- return gulp.src("src/fonts/*.{ttf,otf}")
-   .pipe(fontgen({
-     dest: "build/asstes/fonts/"
-   }));
+gulp.task('svgSprite', function () {
+   return gulp.src('src/icons/*.svg')
+       .pipe(svgSprite())
+       .pipe(gulp.dest("build/assets/icons"));
 });
 
 // -------------- WEBPACK -----------------
@@ -85,5 +84,6 @@ gulp.task('watch', function () {
  gulp.watch('./src/templates/**/*.pug', gulp.series('pug'));
  gulp.watch('./src/images/**/*.{png,jpg,jpeg}', gulp.series('tinypng'));
  gulp.watch('./src/scripts/**/*.js', gulp.series('webpack'));
+ gulp.watch('./src/icons/*.svg', gulp.series('svgSprite'));
 });
 
