@@ -1,0 +1,33 @@
+.hamburger__button{
+    background: transparent;
+    border: 0;
+    width:40px;
+    height:35px;
+    outline:0;
+    z-index:1;
+}
+
+.hamburger__block{
+    height:5px;
+    background-color: white;
+    border-radius:2px;
+    margin-bottom:10px;
+    transition: .3s;
+
+    &:last-child{
+        margin-bottom:0;
+    }
+}
+
+.hamburger__input{
+    &:checked ~ .hamburger__block_center{
+        display:none;
+    }
+    &:checked ~ .hamburger__block_top{
+        transform:rotate(45deg) translateY(5.5px) translateX(5px);
+
+    }
+    &:checked ~ .hamburger__block_bottom{
+        transform:rotate(-45deg) translateY(-5.5px) translateX(5px);
+    }
+}

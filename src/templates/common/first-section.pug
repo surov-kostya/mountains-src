@@ -8,10 +8,11 @@ section.section.first-section
                             use(xlink:href='./assets/icons/svg/symbols.svg#' + item)
 
         .header__hamburger.hamburger
-            button.hamburger__button
-                input(type="checkbox").hamburger__input
-                each position in ['top', 'center', 'bottom']
-                    //- .hamburger__block.hamburger__block_${position}
+            button.hamburger__button(type='button')
+                label.hamburger__label
+                    input.hamburger__input(type="checkbox").visually-hidden
+                    each position in ['top', 'center', 'bottom']
+                        .hamburger__block(class='hamburger__block_' + position)
     .first-section__title
         svg.first-section__title-img
             use(xlink:href='./assets/icons/svg/symbols.svg#portfolio_header')
