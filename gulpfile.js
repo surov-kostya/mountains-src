@@ -61,9 +61,23 @@ var svgSprite = require("gulp-svg-sprites");
 
 gulp.task('svgSprite', function () {
    return gulp.src('src/icons/*.svg')
-       .pipe(svgSprite())
+       .pipe(svgSprite({mode: "symbols"}))
        .pipe(gulp.dest("build/assets/icons"));
 });
+
+// ----------- BROWSER SYNC ---------------
+
+var browserSync = require('browser-sync').create();
+
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./build/"
+        }
+    });
+});
+
+gulp.watch('./build').on('change', browserSync.reload);
 
 // -------------- WEBPACK -----------------
 
@@ -72,7 +86,7 @@ var gulpWebpack = require('gulp-webpack');
 var webpackConfig = require('./webpack.config.js');
 
 gulp.task('webpack', function() {
-  return gulp.src('src/scripts/app.js')
+  return gulp.src('src/scripts/*.js')
     .pipe(gulpWebpack(webpackConfig, webpack))
     .pipe(gulp.dest('build/assets/scripts'));
 });
@@ -87,3 +101,6 @@ gulp.task('watch', function () {
  gulp.watch('./src/icons/*.svg', gulp.series('svgSprite'));
 });
 
+// ---------------- DEFAULT ----------------
+
+gulp.task('default', gulp.parallel('watch', 'browser-sync'));

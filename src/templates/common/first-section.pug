@@ -1,16 +1,20 @@
 section.section.first-section
     header.first-section__header.header
         ul.header__socials.socials
-            li.socials__item
-                a.socials__link(href="#")
-            li.socials__item
-                a.socials__link(href="#")
-            li.socials__item
-                a.socials__link(href="#")
-        .header__hamburger
-    .first-section__bg-text
-        svg.first-section__bg-img
-            use(xlink:href='./assets/icons/svg/sprite.svg#portfolio_header')
+            each item in ['vk', 'github', 'in']
+                li.socials__item
+                    a.socials__link(href="#")
+                        svg.socials__img                            
+                            use(xlink:href='./assets/icons/svg/symbols.svg#' + item)
+
+        .header__hamburger.hamburger
+            button.hamburger__button
+                input(type="checkbox").hamburger__input
+                each position in ['top', 'center', 'bottom']
+                    .hamburger__block.hamburger__block_${position}
+    .first-section__title
+        svg.first-section__title-img
+            use(xlink:href='./assets/icons/svg/symbols.svg#portfolio_header')
     .first-section__person-card.person-card
         .person-card__avatar
         .person-card__name
