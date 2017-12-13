@@ -65,7 +65,7 @@ gulp.task('svgSprite', function () {
 // ---------- FONTS just copy -------------
 
 gulp.task('copyFonts', ()=>{
-    return gulp.src('src/fonts/*.woff?')
+    return gulp.src('src/fonts/*.woff*')
         .pipe(gulp.dest('build/assets/fonts'));
 });
 
@@ -108,6 +108,6 @@ gulp.task('watch', function () {
 
 // ---------------- DEFAULT ----------------
 
-gulp.task('start', gulp.parallel('sass', 'pug', 'webpack', 'svgSprite', 'copyFonts'));
+gulp.task('start', gulp.parallel('sass', 'pug', 'svgSprite', 'copyFonts'));
 
 gulp.task('default', gulp.parallel('watch', 'browser-sync'));
