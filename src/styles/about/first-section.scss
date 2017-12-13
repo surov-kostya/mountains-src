@@ -43,3 +43,25 @@
     fill: white;
     fill-opacity: .06;
 }
+
+.first-section__arrow{
+    position:absolute;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom:70px;
+}
+
+.first-section__arrow-img{
+    width:26px;
+    height:16px;
+    fill:white;
+    fill-opacity: .7;
+}
+
+.first-section__person-card{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}

@@ -13,4 +13,10 @@
 .socials__img{
     width: 31px;
     height: 22px;
+    fill: white;
+    fill-opacity: .5;
+
+    &:hover {
+        fill-opacity: 1;
+    }
 }

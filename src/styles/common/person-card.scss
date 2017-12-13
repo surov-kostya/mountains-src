@@ -1,0 +1,30 @@
+.person-card{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items:center;
+    text-align:center;
+}
+
+.person-card__avatar{
+    width: 141px;
+    height: 141px;
+    border-radius:50%;
+    background-image: url(../images/person-card/155312-600-jpg);
+    background-position:center;
+    background-size:cover;
+}
+
+.person-card__name{
+    font-family: 'roboto';
+    font-weight: medium;
+    color: white;
+    font-size:35px;
+}
+
+.person-card__text{
+    font-family: 'roboto';
+    font-weight: lighter;
+    color: rgba(white, .8);
+    font-size:16px;
+}

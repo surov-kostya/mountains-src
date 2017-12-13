@@ -42,13 +42,14 @@ a{
 }
 
 .wrapper{
-	position: relative;
+	// position: relative;
 	width:100%;
 	overflow: hidden;
 	min-height: 100%;
 }
 
 .section{
+	position:relative;
 	height: 100vh;
 	min-height: 650px;
 	width: 100%;
