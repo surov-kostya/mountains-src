@@ -40,16 +40,21 @@ gulp.task('pug', function buildHTML() {
 
 // --------------- IMAGES -----------------
 
-var tinypng = require('gulp-tinypng-compress');
+// var tinypng = require('gulp-tinypng-compress');
 
-gulp.task('tinypng', function () {
-	gulp.src('./src/images/**/*.{png,jpg,jpeg}')
-		.pipe(tinypng({
-			key: 'l24fUOu4hXFd9vBdrobEB8nfVjpyHHpm',
-			sigFile: 'images/.tinypng-sigs',
-			log: true
-		}))
-		.pipe(gulp.dest('./build/assets/images'));
+// gulp.task('tinypng', function () {
+// 	gulp.src('./src/images/**/*.{png,jpg,jpeg}')
+// 		.pipe(tinypng({
+// 			key: 'l24fUOu4hXFd9vBdrobEB8nfVjpyHHpm',
+// 			sigFile: 'images/.tinypng-sigs',
+// 			log: true
+// 		}))
+// 		.pipe(gulp.dest('./build/assets/images'));
+// });
+
+gulp.task('copyImg', ()=>{
+    gulp.src('src/images/**/*.{png,jpg,jpeg}')
+        .pipe(gulp.dest('build/assets/images'));
 });
 
 // ------------- SVG SPRITE ---------------
@@ -65,7 +70,7 @@ gulp.task('svgSprite', function () {
 // ---------- FONTS just copy -------------
 
 gulp.task('copyFonts', ()=>{
-    return gulp.src('src/fonts/*.woff*')
+    return gulp.src('src/fonts/*.{woff,woff2}')
         .pipe(gulp.dest('build/assets/fonts'));
 });
 
@@ -100,7 +105,7 @@ gulp.task('webpack', function() {
 gulp.task('watch', function () {
  gulp.watch('./src/styles/**/*.scss', gulp.series('sass'));
  gulp.watch('./src/templates/**/*.pug', gulp.series('pug'));
- gulp.watch('./src/images/**/*.{png,jpg,jpeg}', gulp.series('tinypng'));
+ gulp.watch('./src/images/**/*.{png,jpg,jpeg}', gulp.series('copyImg'));
  gulp.watch('./src/scripts/**/*.js', gulp.series('webpack'));
  gulp.watch('./src/icons/*.svg', gulp.series('svgSprite'));
  gulp.watch('src/fonts/*.{woff, woff2}', gulp.series('copyFonts'));
@@ -108,6 +113,6 @@ gulp.task('watch', function () {
 
 // ---------------- DEFAULT ----------------
 
-gulp.task('start', gulp.parallel('sass', 'pug', 'svgSprite', 'copyFonts'));
+gulp.task('start', gulp.parallel('sass', 'pug', 'svgSprite', 'copyFonts', 'copyImg'));
 
 gulp.task('default', gulp.parallel('watch', 'browser-sync'));

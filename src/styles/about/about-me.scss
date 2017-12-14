@@ -1,0 +1,46 @@
+.aboute-me{
+    display:flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items:center;
+}
+
+.about-me__title{
+    text-transform: uppercase;
+    font-family: 'bernier_regular';
+    font-size:63px;
+    color:#373e42;
+    position:relative;
+
+    @include before-after-complete-dash;
+}
+
+.about-me__title-img{
+    position: absolute;
+    left: 50%;
+    top:25%;
+    transform: translate(-50%, -50%);
+    fill-opacity: .1;
+    width: 357px;
+    height:125px;
+}
+
+.about-me__subtitle{
+    text-transform: uppercase;
+    font-family: 'bernier_regular';
+    font-size:35px;
+    color:$color-text-gray;
+}
+
+.aboute-me__avatar{
+    width:443px;
+    height: 391px;
+    background-image: url(../images/person-card/155312-600.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.about-me__text{
+    width:calc(100/600*443%);
+}
+

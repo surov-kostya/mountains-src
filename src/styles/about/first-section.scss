@@ -23,12 +23,12 @@
     height:100%;    
 
     &_left{
-        background-color:#efeee9;
+        background-color:$color-left-side;
         clip-path: polygon(0 0, 0 100%, 100% 100%);
     }
 
     &_right{
-        background-color:#eeebdf;
+        background-color:$color-right-side;
         clip-path: polygon(100% 0, 0 100%, 100% 100%);
     }
 }

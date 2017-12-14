@@ -5,7 +5,11 @@
 @import "common/hamburger";
 @import "common/person-card";
 @import "config/fonts";
+@import "config/variables";
+@import "config/mixins";
 @import "about/first-section";
 @import "about/second-section";
 @import "about/last-section";
+@import "about/about-me";
+@import "about/my-benefits";
 @import "index/index";
