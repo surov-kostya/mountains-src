@@ -1,7 +1,5 @@
 .first-section{
-    background-image: url('../images/bg-top/bg-1800.jpg');
-    background-position: center top;
-    background-size: cover;
+    @include bg-image('../images/bg-top/bg-1800.jpg');
     display:flex;
     flex-flow:column;
     justify-content: space-between;

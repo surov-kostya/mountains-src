@@ -1,0 +1,7 @@
+.last-section{
+    @include bg-image('../images/bg-map/map.jpg');
+}
+
+.last-section__contacts{
+    position: absolute;
+}

@@ -30,3 +30,9 @@
         @include before-after-dash(115%);
     }
 }
+
+@mixin bg-image ($img-url){
+    background-image: url($img-url);
+    background-position: center top;
+    background-size: cover;
+}
