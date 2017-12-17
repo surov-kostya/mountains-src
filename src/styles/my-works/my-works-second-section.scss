@@ -1,0 +1,24 @@
+.my-works-second-section__projects{
+    min-height: 755px;
+}
+
+.my-works-second-section__title{
+    height:186px;
+    background-color: #faf8f0;
+    @include dis-fle-cen;
+    position: relative;
+}
+
+.my-works-second-section__title-bg{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    fill-opacity: .07;
+    width:495px;
+    height:155px;
+}
+
+.my-works-second-section__title-text{
+    @include font-h1;
+}

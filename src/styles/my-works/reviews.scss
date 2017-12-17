@@ -1,0 +1,42 @@
+.reviews{
+    display:flex;
+    justify-content: center;
+}
+
+.reviews__item{
+    width:367px;
+    max-width:50%;
+    margin: 0 18px;
+    p{
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        color:$color-text-gray;
+        line-height: 26px;
+    }
+}
+
+.review-user{
+    margin-top: 30px;
+    display:flex;
+}
+
+.review-user__avatar{
+    width:80px;
+    height:80px;
+    border-radius: 50%;
+    margin-right:25px;
+}
+
+.review-user__about{
+    display:flex;
+    flex-flow: column;
+    color: $color-text-green;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    justify-content: center;
+}
+
+.review-user__name{
+    line-height: 24px;
+    font-weight: 700;
+}

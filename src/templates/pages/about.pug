@@ -2,10 +2,11 @@ extends ../template
 
 block title
     title Обо мне
+    - var page = 'about'
 
 block content
-    section.section.second-section
-        .second-section__left.aboute-me
+    section.section.about-second-section
+        .about-second-section__left.aboute-me
             .about-me__title 
                 h1 Обо мне
                 svg.about-me__title-img
@@ -23,7 +24,7 @@ block content
                     Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,
                     как тут всё классно и красиво!
         
-        .second-section__right.my-benefits
+        .about-second-section__right.my-benefits
             .my-benefits__title Чем я могу быть вам полезен
             .my-benefits__text
                 p.
@@ -45,9 +46,9 @@ block content
                                         li.my-benefits__technology #{technology}
 
 
-    section.section.last-section
-        .last-section__map
-        .last-section__contacts
+    section.section.last-section.about-last-section
+        .about-last-section__map
+        .about-last-section__contacts
         block footer 
             include ../common/footer
 

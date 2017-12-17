@@ -20,9 +20,7 @@
 }
 
 .footer-nav{
-    display:flex;
-    justify-content: center;
-    align-items: center;
+    @include dis-fle-cen;
 }
 
 .footer-nav__item{
@@ -54,17 +52,13 @@
 }
 
 .footer-socials__item{
-    display:flex;
-    justify-content: center;
-    align-content: center;
+    @include dis-fle-cen;
     height:38px;
     width:38px;
     border-radius:50%;
     border: 1px solid rgba(white, .5);
     margin-left: 10px;
 }
-
-
 
 .footer-socials__img{
     height:38px;
@@ -109,4 +103,8 @@
 
 .footer__text_right{
     text-align: right;
+}
+
+.last-section{
+    padding-bottom: 148px;
 }

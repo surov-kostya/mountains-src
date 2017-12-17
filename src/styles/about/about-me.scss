@@ -9,7 +9,7 @@
     text-transform: uppercase;
     font-family: 'bernier_regular';
     font-size:63px;
-    color:#373e42;
+    color:$color-gray-dark;
     position:relative;
 
     @include before-after-complete-dash;

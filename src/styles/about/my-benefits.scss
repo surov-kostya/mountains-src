@@ -46,9 +46,7 @@
     height:111px;
     border-radius:50%;
     border:21px solid #dfdcd5;
-    display:flex;
-    justify-content: center;
-    align-items: center;
+    @include dis-fle-cen;
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;

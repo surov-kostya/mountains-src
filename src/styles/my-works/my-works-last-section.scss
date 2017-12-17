@@ -1,0 +1,27 @@
+.my-works-last-section{
+    position: relative;
+    display:flex;
+    flex-flow:column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.my-works-last-section__title{
+    @include font-h1;
+    @include dis-fle-cen;
+    height:250px;
+}
+
+.my-works-last-section__title-bg{
+    position: absolute;
+    @include abs-center;
+    fill-opacity: .06;
+    width: 502px;
+    height:169px;
+}
+
+.my-works-last-section__form{
+    width:385px;
+    height:435px;
+}

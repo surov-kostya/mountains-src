@@ -1,8 +1,6 @@
 .person-card{
-    display: flex;
+    @include dis-fle-cen;
     flex-flow: column;
-    justify-content: center;
-    align-items:center;
     text-align:center;
 }
 

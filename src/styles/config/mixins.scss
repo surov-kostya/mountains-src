@@ -1,10 +1,23 @@
-@mixin font-h1($color){
+@mixin font-h1{
     text-transform: uppercase;
-    font-family: 'gagalin', 'Helvetica', sans-serif;
+    font-family: 'bernier_regular';
+    text-transform: uppercase;
     font-weight: normal;
     font-style: normal;
-    font-size: 72px;
-    color:$color;
+    font-size: 63px;
+    color:$color-gray-dark;
+    @include before-after-complete-dash;
+}
+
+@mixin font-h2{
+    text-transform: uppercase;
+    font-family: 'bernier_regular';
+    text-transform: uppercase;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 35px;
+    color:$color-text-gray;
+    @include before-after-complete-dash;
 }
 
 @mixin before-after-dash ($left-percent){
@@ -16,7 +29,7 @@
     content:'';
     width:22px;
     height:6px;
-    background-color:rgba(#373e42, .2);
+    background-color:rgba($color-gray-dark, .2);
 }
 
 @mixin before-after-complete-dash{
@@ -35,4 +48,17 @@
     background-image: url($img-url);
     background-position: center top;
     background-size: cover;
+}
+
+@mixin dis-fle-cen{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin abs-center{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
 }
