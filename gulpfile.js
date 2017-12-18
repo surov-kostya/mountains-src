@@ -40,20 +40,20 @@ gulp.task('pug', function buildHTML() {
 
 // --------------- IMAGES -----------------
 
-// var tinypng = require('gulp-tinypng-compress');
+var tinypng = require('gulp-tinypng-compress');
 
-// gulp.task('tinypng', function () {
-// 	gulp.src('./src/images/**/*.{png,jpg,jpeg}')
-// 		.pipe(tinypng({
-// 			key: 'l234fUOu4hXFd9vBdrobEB8nfVjpyHHpm',
-// 			sigFile: 'images/.tinypng-sigs',
-// 			log: true
-// 		}))
-// 		.pipe(gulp.dest('./build/assets/images'));
-// });
+gulp.task('tinypng', function () {
+	gulp.src('./src/images/**/*.{png,jpg,jpeg}')
+		.pipe(tinypng({
+			key: 'l24fUOu4hXFd9vBdrobEB8nfVjpyHHpm',
+			sigFile: 'images/.tinypng-sigs',
+			log: true
+		}))
+		.pipe(gulp.dest('./build/assets/images'));
+});
 
-gulp.task('copyImg', ()=>{
-    gulp.src('src/images/**/*.{png,jpg,jpeg}')
+gulp.task('copyImg', function () {
+    gulp.src('src/images/**/*.{png,jpg,jpeg}', { read: false })
         .pipe(gulp.dest('build/assets/images/'));
 });
 

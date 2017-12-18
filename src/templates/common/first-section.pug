@@ -1,11 +1,8 @@
 section.section.first-section
     header.first-section__header.header
-        ul.header__socials.socials
-            each item in ['vk', 'github', 'in']
-                li.socials__item
-                    a.socials__link(href="#")
-                        svg.socials__img                            
-                            use(xlink:href='./assets/icons/svg/symbols.svg#' + item)
+        .header__socials
+            block socials
+                include socials
 
         .header__hamburger.hamburger
             button.hamburger__button(type='button')
@@ -16,10 +13,9 @@ section.section.first-section
     .first-section__title
         svg.first-section__title-img
             use(xlink:href='./assets/icons/svg/symbols.svg#portfolio_header')
-    .first-section__person-card.person-card
-        .person-card__avatar
-        .person-card__name Суров Константин
-        .person-card__text Личный сайт веб-разработчика
+    .first-section__person-card 
+        block person-card
+            include person-card
     .first-section__arrow
         a.first-section__arrow-link(href='#')
             svg.first-section__arrow-img

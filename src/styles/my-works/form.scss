@@ -5,16 +5,21 @@
     overflow:hidden;
 }
 
-// .my-works-last-section-form__blur rect{
-//     fill:white;
-//     fill-opacity: .2;
-//     filter: url(#blur);
-// }
+.my-works-last-section-form{
+    width: 100%;
+    height: 100%;
+}
+
+.my-works-last-section-form__filter-blur{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    filter: blur(10px);
+}
 
 .my-works-last-section-form__wrapper{
-    top:0;
-    left:0;
-    position: absolute;
     display:flex;
     flex-flow: column;
     align-items: center;
