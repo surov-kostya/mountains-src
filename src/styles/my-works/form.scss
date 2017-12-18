@@ -1,0 +1,79 @@
+.my-works-last-section__form{
+    position:relative;
+    width: 380px;
+    height: 437px;
+    overflow:hidden;
+}
+
+// .my-works-last-section-form__blur rect{
+//     fill:white;
+//     fill-opacity: .2;
+//     filter: url(#blur);
+// }
+
+.my-works-last-section-form__wrapper{
+    top:0;
+    left:0;
+    position: absolute;
+    display:flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 380px;
+    height: 437px;
+}
+
+.my-works-last-section-form__inputs{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 335px;
+}
+
+.my-works-last-section-form__title{
+    @include font-h2;
+}
+
+.my-works-last-section-form__controls{
+    display:flex;
+    height:45px;
+    width:100%;
+}
+
+.my-works-last-section-form__btn{
+    width:50%;
+    height:100%;
+    background-color: $color-text-green;
+    border:0;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-size:16px;
+    font-weight: 500;
+}
+
+.my-works-last-section-form__btn_submit{
+    border-right:1px solid white;
+    border-radius: 0 0 0 5px;
+}
+
+.my-works-last-section-form__btn_reset{
+    border-left:1px solid white;
+    border-radius: 0 0 5px 0;
+}
+
+.my-works-last-section-form__name{
+    width:340px;
+    height:45px;
+}
+
+.my-works-last-section-form__email{
+    width:340px;
+    height:45px;
+}
+
+.my-works-last-section-form__comment{
+    width:340px;
+    height: 140px;
+    resize: none;
+}

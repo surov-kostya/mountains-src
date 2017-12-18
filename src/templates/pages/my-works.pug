@@ -43,7 +43,7 @@ block content
         .my-works-last-section__reviews
             ul.reviews
                 li.reviews__item
-                    svg.reviews__quotes
+                    i(class="fa fa-quote-left fa-3x" aria-hidden="true")
                     p.
                         Этот парень проходил обучение веб-разработке 
                         не где-то, а в LoftSchool! 5 месяцев только самых 
@@ -57,7 +57,7 @@ block content
 
             
                 li.reviews__item
-                    svg.reviews__quotes
+                    i(class="fa fa-quote-left fa-3x" aria-hidden="true")
                     p.
                         Этот код выдержит любые испытания. Только 
                         пожалуйста, не загружается сайт на слишком 
@@ -70,9 +70,19 @@ block content
                             .review-user__position преподаватель
         .my-works-last-section__form
             form.my-works-last-section-form
-                .my-works-last-section-form__title
-                input.my-works-last-section-form__name(type="text")
-                input.my-works-last-section-form__email(type="email")
-                textarea.my-works-last-section-form__comment
+                svg.my-works-last-section-form__blur(width="380" height="437")
+                    rect(x="0" y="0" width="380" height="437" class="svg-rect")
+                    defs
+                        filter(id="blur")
+                            feGaussianBlur(stdDeviation="15" resul="blur")
+                .my-works-last-section-form__wrapper
+                    .my-works-last-section-form__inputs
+                        .my-works-last-section-form__title Связаться со мной
+                        input.my-works-last-section-form__name(type="text")
+                        input.my-works-last-section-form__email(type="email")
+                        textarea.my-works-last-section-form__comment
+                    .my-works-last-section-form__controls
+                        input.my-works-last-section-form__btn.my-works-last-section-form__btn_submit(type="submit" value="Отправить")
+                        input.my-works-last-section-form__btn.my-works-last-section-form__btn_reset(type="reset" value="Очистить")
         block footer
             include ../common/footer

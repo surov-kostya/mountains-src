@@ -1,13 +1,6 @@
-// ----------- FONTAWESOME ------------
+// ----------- FONTAWSOME --------------
 
-@font-face {
-    font-family: 'fontawesome';
-    src: url('../fonts/fontawesome-webfont.woff2') format('woff2'),
-         url('../fonts/fontawesome-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
+@import './font-awesome-4.7.0/scss/font-awesome.scss';
 
 
 // ------------- BERNIER ---------------
