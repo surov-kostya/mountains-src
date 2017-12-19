@@ -6,6 +6,29 @@
     align-items: center;
 }
 
+.index-section__top{
+    align-self: flex-end;
+}
+
+.index-section__auth-btn{
+    width:180px;
+    height:45px;
+    border: 1px solid white;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    background: transparent;
+    border-radius: 5px;
+    margin-top:25px;
+    margin-right: 20px;
+    outline: none;
+    cursor: pointer;
+    align-self: flex-end;
+
+    &:hover{
+        border: 2px solid white;
+    }
+}
+
 .index-panel{
     @include abs-center;
 
@@ -58,7 +81,7 @@
 }
 
 .index-panel__btn{
-    background-color: $color-text-green;
+    background-color: rgba($color-text-green, .85);
     height:100%;
     flex: 1;
     text-align: center;
@@ -68,7 +91,12 @@
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 500;
+
+    &:hover{
+        background-color: darken($color-text-green, 10%);
+    }
 }
+
 
 .index-panel__btn_my-works{
     flex-basis: 35%;
@@ -87,5 +115,6 @@
 .index-section__bottom{
     margin-bottom: 30px;
     font-family: 'Roboto', sans-serif;
-    
+    font-weight: 300;
+    color:white;
 }
