@@ -3,6 +3,7 @@
     width: 380px;
     height: 437px;
     overflow:hidden;
+    margin-top: 70px;
 }
 
 .my-works-last-section-form{
@@ -20,12 +21,17 @@
 }
 
 .my-works-last-section-form__wrapper{
+    position:absolute;
     display:flex;
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
-    width: 380px;
-    height: 437px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    // width: 380px;
+    // height: 437px;
 }
 
 .my-works-last-section-form__inputs{

@@ -1,6 +1,9 @@
 .index-section{
     @include bg-image('../images/bg-index/bg-1200.jpg');
-
+    display: flex;
+    flex-flow:column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .index-panel{
@@ -17,6 +20,10 @@
     flex-flow: column;
     justify-content: space-around;
     align-items: center;
+
+    .socials__item:first-child{
+        margin-left:0;
+    }
 
     .socials__img{
         fill:$color-text-green;
@@ -45,3 +52,40 @@
     }
 }
 
+.index-panel__bottom{
+    display: flex;
+    height: 45px;
+}
+
+.index-panel__btn{
+    background-color: $color-text-green;
+    height:100%;
+    flex: 1;
+    text-align: center;
+    @include dis-fle-cen;
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.index-panel__btn_my-works{
+    flex-basis: 35%;
+}
+
+.index-panel__btn_about-me{
+    flex-basis: 30%;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.index-panel__btn_blog{
+    flex-basis: 25%;
+}
+
+.index-section__bottom{
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+    
+}

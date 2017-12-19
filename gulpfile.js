@@ -43,7 +43,7 @@ gulp.task('pug', function buildHTML() {
 var tinypng = require('gulp-tinypng-compress');
 
 gulp.task('tinypng', function () {
-	gulp.src('./src/images/**/*.{png,jpg,jpeg}')
+	return gulp.src('./src/images/**/*.{png,jpg,jpeg}')
 		.pipe(tinypng({
 			key: 'l24fUOu4hXFd9vBdrobEB8nfVjpyHHpm',
 			sigFile: 'images/.tinypng-sigs',
@@ -53,7 +53,7 @@ gulp.task('tinypng', function () {
 });
 
 gulp.task('copyImg', function () {
-    gulp.src('src/images/**/*.{png,jpg,jpeg}', { read: false })
+    return gulp.src('src/images/**/*.*')
         .pipe(gulp.dest('build/assets/images/'));
 });
 
