@@ -22,9 +22,26 @@
     margin-bottom: 7px;
 }
 
+.person-card__blog{
+    @include font-h1;
+    color: white;
+
+    &:before{
+        background-color:rgba(white, .2);
+    }
+
+    &:after{
+        background-color:rgba(white, .2);
+    }
+}
+
 .person-card__text{
     font-family: 'roboto';
     font-weight: lighter;
     color: rgba(white, .8);
     font-size:16px;
+}
+
+.blog .person-card__text{
+    font-weight:400;
 }

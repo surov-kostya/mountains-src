@@ -1,0 +1,13 @@
+.blog-section{
+    display:flex;
+    justify-content: space-around;
+}
+
+.blog-section__left{
+    flex-basis:310px;
+    text-align: right;
+}
+
+.blog-section__right{
+    flex-basis:680px;
+}
