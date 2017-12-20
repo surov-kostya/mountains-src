@@ -31,6 +31,11 @@
     }
 }
 
+.my-works .first-section__angle-block{
+    background-color:#faf8f0;
+}
+
+
 .first-section__title{
     text-align:center;
 }
@@ -55,6 +60,10 @@
     height:16px;
     fill:white;
     fill-opacity: .7;
+    
+    &:hover{
+        fill-opacity: 1;
+    }
 }
 
 .first-section__person-card{

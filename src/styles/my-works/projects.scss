@@ -10,6 +10,7 @@
 .projects__slider{
     width:50%;
     background-color: #efebe0;
+    overflow: hidden;
 }
 
 .project-description{
@@ -17,10 +18,12 @@
     text-align: center;
     @include dis-fle-cen;
     flex-flow:column;
+    overflow:hidden;
 }
 
 .project-description__title{
     @include font-h2;
+    @include before-after-dash(66px);
 }
 
 .project-description__technologies{
@@ -75,6 +78,7 @@
 
 .project-slider__controls{
     display: flex;
+    width:100%;
 }
 
 .project-slider__button{
@@ -105,7 +109,6 @@
     &:hover{
         background-color: transparent;
     }
-
 }
 
 .project-slider__filter_prev{

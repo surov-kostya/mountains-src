@@ -6,7 +6,7 @@
     font-style: normal;
     font-size: 63px;
     color:$color-gray-dark;
-    @include before-after-complete-dash;
+    // @include before-after-complete-dash;
 }
 
 @mixin font-h2{
@@ -36,11 +36,37 @@
     position: relative;
 
     &::before{
-        @include before-after-dash(-20px);
+        @include before-after-dash(-15%);
     }
 
     &::after{
         @include before-after-dash(115%);
+    }
+}
+
+@mixin title-dash{
+    display: block;
+    content:'';
+    width:22px;
+    height:6px;
+    background-color:rgba($color-gray-dark, .2);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: calc($line-height/200*1%);
+}
+
+@mixin before-after-dash ($line-height){
+    position: relative;
+    line-height: $line-height;
+
+    &:before{        
+        left: 20px;
+        @include title-dash;
+    }
+
+    &:after{
+        right:20px;
+        @include title-dash;
     }
 }
 
