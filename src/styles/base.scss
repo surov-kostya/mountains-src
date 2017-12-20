@@ -41,10 +41,14 @@ a{
 }
 
 .wrapper{
-	// position: relative;
+	position: relative;
 	width:100%;
 	overflow: hidden;
 	min-height: 100%;
+
+	&__empty{
+		height: 214px;
+	}
 }
 
 section{
