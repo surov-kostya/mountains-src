@@ -43,13 +43,13 @@ gulp.task('pug', function buildHTML() {
 var tinypng = require('gulp-tinypng-compress');
 
 gulp.task('tinypng', function () {
-	return gulp.src('./src/images/**/*.{png,jpg,jpeg}')
+	return gulp.src('./src/temp/**/*.{png,jpg,jpeg}')
 		.pipe(tinypng({
 			key: 'l24fUOu4hXFd9vBdrobEB8nfVjpyHHpm',
 			sigFile: 'images/.tinypng-sigs',
 			log: true
 		}))
-		.pipe(gulp.dest('./build/assets/images'));
+		.pipe(gulp.dest('./src/images/'));
 });
 
 gulp.task('copyImg', function () {
@@ -100,22 +100,13 @@ gulp.task('webpack', function() {
     .pipe(gulp.dest('build/assets/scripts'));
 });
 
-// --------------- WATCH ------------------
-
-gulp.task('watch', function () {
- gulp.watch('./src/styles/**/*.scss', gulp.series('sass'));
- gulp.watch('./src/templates/**/*.pug', gulp.series('pug'));
- gulp.watch('./src/images/**/*.{png,jpg,jpeg}', gulp.series('copyImg'));
- gulp.watch('./src/scripts/**/*.js', gulp.series('webpack'));
- gulp.watch('./src/icons/*.svg', gulp.series('svgSprite'));
- gulp.watch('src/fonts/*.{woff, woff2}', gulp.series('copyFonts'));
-});
-
-// ---------------- DELETE -----------------
+// ------------- DELETE --------------
 
 var del = require('del');
 
-gulp.task('clean', ()=> {
+// ------ clear build -------
+
+gulp.task('cleanBuild', ()=> {
     return del([
         './report.csv',
         'build/**/*',
@@ -123,8 +114,34 @@ gulp.task('clean', ()=> {
     ]);
 });
 
+// --- clear temp/*.{png, jpg, jpeg} ----
+
+
+gulp.task('cleanTemp', ()=> {
+    return del([
+        './report.csv',
+        'src/temp/**/*',
+        '!src/temp/.gitignore'
+    ]);
+});
+
+// --------------- WATCH ------------------
+
+gulp.task('watch', function () {
+    gulp.watch('./src/styles/**/*.scss', gulp.series('sass'));
+    gulp.watch('./src/templates/**/*.pug', gulp.series('pug'));
+    gulp.watch('./src/temp/**/*.{png,jpg,jpeg}', gulp.series('tinypng', 'cleanTemp')); 
+    // tinypng мониторит изменения в src/temp. Если появилась картинка:
+    // 1) сжимает ее; 2) перекладывает в src/images, вместе с --parent каталогом; 3) cleanTemp чистит src/temp
+    gulp.watch('./src/images/**/*.{png,jpg,jpeg}', gulp.series('copyImg'));
+    // Если в src/images произошли изменения - *.{png,jpg,jpeg} копируются в build/images вместе с --parent каталогом
+    gulp.watch('./src/scripts/**/*.js', gulp.series('webpack'));
+    gulp.watch('./src/icons/*.svg', gulp.series('svgSprite'));
+    gulp.watch('src/fonts/*.{woff, woff2}', gulp.series('copyFonts'));
+   });
+
 // ---------------- DEFAULT ----------------
 
-gulp.task('start', gulp.series('clean', gulp.parallel( 'copyImg', 'sass', 'pug', 'svgSprite', 'copyFonts')));
+gulp.task('start', gulp.series('cleanBuild', gulp.parallel( 'copyImg', 'sass', 'pug', 'svgSprite', 'copyFonts')));
 
 gulp.task('default', gulp.parallel('watch', 'browser-sync'));

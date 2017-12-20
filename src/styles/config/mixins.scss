@@ -6,68 +6,16 @@
     font-style: normal;
     font-size: 63px;
     color:$color-gray-dark;
-    // @include before-after-complete-dash;
+    position: relative;
 }
 
 @mixin font-h2{
     text-transform: uppercase;
     font-family: 'bernier_regular';
-    text-transform: uppercase;
     font-weight: normal;
     font-style: normal;
     font-size: 35px;
     color:$color-text-gray;
-    @include before-after-complete-dash;
-}
-
-@mixin before-after-dash ($left-percent){
-    position: absolute;
-    top: 50%;
-    left: $left-percent;
-    transform: translate(-50%, -50%);
-    display: block;
-    content:'';
-    width:22px;
-    height:6px;
-    background-color:rgba($color-gray-dark, .2);
-}
-
-@mixin before-after-complete-dash{
-    position: relative;
-
-    &::before{
-        @include before-after-dash(-15%);
-    }
-
-    &::after{
-        @include before-after-dash(115%);
-    }
-}
-
-@mixin title-dash{
-    display: block;
-    content:'';
-    width:22px;
-    height:6px;
-    background-color:rgba($color-gray-dark, .2);
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: calc($line-height/200*1%);
-}
-
-@mixin before-after-dash ($line-height){
-    position: relative;
-    line-height: $line-height;
-
-    &:before{        
-        left: 20px;
-        @include title-dash;
-    }
-
-    &:after{
-        right:20px;
-        @include title-dash;
-    }
 }
 
 @mixin bg-image ($img-url){

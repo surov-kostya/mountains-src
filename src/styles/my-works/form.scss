@@ -1,3 +1,30 @@
+.object{
+    position: relative;
+    background: rgba(232,232,232,0.2);
+  }
+  
+  .blur-effect {
+    position: absolute; 
+    background: inherit; 
+    overflow: hidden;
+    visibility: hide;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .blur-effect:before {
+    visibility: visible;
+    content: ' ';
+    position: absolute;
+    background: inherit;
+    width: 110%;                   
+    height: 110%;
+    left: -5%;
+    top: -5%;
+    filter: blur(20px) grayscale(20%);
+  }
+
 .my-works-last-section__form{
     position:relative;
     width: 380px;
@@ -21,6 +48,7 @@
 }
 
 .my-works-last-section-form__wrapper{
+    padding-top:40px;
     position:absolute;
     display:flex;
     flex-flow: column;

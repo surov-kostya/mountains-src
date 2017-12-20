@@ -23,7 +23,6 @@
 
 .project-description__title{
     @include font-h2;
-    @include before-after-dash(66px);
 }
 
 .project-description__technologies{

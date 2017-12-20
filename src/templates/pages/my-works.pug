@@ -68,10 +68,9 @@ block content
                         .review-user__about
                             .review-user__name Сабанцев Владимир
                             .review-user__position преподаватель
-        .my-works-last-section__form
+        .my-works-last-section__form.blur-effect
             form.my-works-last-section-form
-                .my-works-last-section-form__filter-blur
-                .my-works-last-section-form__wrapper
+                .my-works-last-section-form__wrapper.object
                     .my-works-last-section-form__inputs
                         .my-works-last-section-form__title Связаться со мной
                         input.my-works-last-section-form__name(type="text")
@@ -80,3 +79,8 @@ block content
                     .my-works-last-section-form__controls
                         input.my-works-last-section-form__btn.my-works-last-section-form__btn_submit(type="submit" value="Отправить")
                         input.my-works-last-section-form__btn.my-works-last-section-form__btn_reset(type="reset" value="Очистить")
+        a.my-works-last-section__arrow(href="#")
+            svg.my-works-last-section__arrow-up
+                use(xlink:href="./assets/icons/svg/symbols.svg#portf_arrow_up")
+
+        
