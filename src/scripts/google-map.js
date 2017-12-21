@@ -179,7 +179,7 @@ function initMap() {
               "elementType": "geometry.fill",
               "stylers": [
                 {
-                  "color": "#5cdece"
+                  "color": "#61dac9"
                 }
               ]
             },
@@ -199,7 +199,7 @@ function initMap() {
         position: {lat: 59.953224, lng: 30.314344},
         map: map,
         title: 'Hello World!',
-        icon: 'assets/icons/svg/map_marker.svg'
+        icon: 'assets/images/map/map_marker.svg'
     });
 }
 window.initMap = initMap;

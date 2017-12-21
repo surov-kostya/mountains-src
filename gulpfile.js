@@ -133,7 +133,7 @@ gulp.task('watch', function () {
     gulp.watch('./src/temp/**/*.{png,jpg,jpeg}', gulp.series('tinypng', 'cleanTemp')); 
     // tinypng мониторит изменения в src/temp. Если появилась картинка:
     // 1) сжимает ее; 2) перекладывает в src/images, вместе с --parent каталогом; 3) cleanTemp чистит src/temp
-    gulp.watch('./src/images/**/*.{png,jpg,jpeg}', gulp.series('copyImg'));
+    gulp.watch('./src/images/**/*.{png,jpg,jpeg,svg}', gulp.series('copyImg'));
     // Если в src/images произошли изменения - *.{png,jpg,jpeg} копируются в build/images вместе с --parent каталогом
     gulp.watch('./src/scripts/**/*.js', gulp.series('webpack'));
     gulp.watch('./src/icons/*.svg', gulp.series('svgSprite'));
