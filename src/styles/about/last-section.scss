@@ -2,6 +2,10 @@
     @include bg-image('../images/bg-map/map.jpg');
 }
 
+.about-last-section__map{
+    height:100vh;
+}
+
 .about-last-section__contacts{
     position: absolute;
 }
