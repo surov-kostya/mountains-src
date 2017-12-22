@@ -1,5 +1,11 @@
+.my-works__second-section{
+    display: flex;
+    flex-flow: column;
+    min-height: calc(100vh - 186px);
+}
+
 .my-works-second-section__projects{
-    min-height: 755px;
+    flex:1 755px;
 }
 
 .my-works-second-section__title{
