@@ -51,6 +51,9 @@ block content
         .about-last-section__contacts 
             .about-last-section__contacts-title Контакты
             ul.contacts
-                each item in [['skype','kostyan5685'], ['mailto','surov.qostya@yandex.ru'], ['tel','+79211234567'], ['address','Санкт-Петербург, Каменноостровский пр.']]
-                    li(class="contacts__" + item[0])
-                        a(class=`contacts__${item[0]}-link` href=``) #{item[1]}
+                each item in [['skype','kostyan5685', "#skype"], ['mailto','surov.qostya@yandex.ru', "#envelope"], ['tel','+79211234567', "#phone"], ['address','Санкт-Петербург, Каменноостровский пр.', "#map_marker"]]
+                    li.contacts__item(class="contacts__" + item[0])
+                        a.contacts__link(class=`contacts__${item[0]}-link` href=`${item[0]}:${item[1]}`)
+                            svg.contacts__icon
+                                use(xlink:href=`./assets/icons/svg/symbols.svg${item[2]}`)
+                            span.contacts__text #{item[1]}

@@ -7,5 +7,17 @@
 }
 
 .about-last-section__contacts{
-    position: absolute;
+    max-width: 380px;
+    min-height: 290px;
+    
+    background-color: rgba(white, .8);
+    border-radius: 7px;
+    @include abs-center;
+    @include dis-fle-col-around;
+    padding: 35px 40px;
+}
+
+.about-last-section__contacts-title{
+    @include font-h2;
+    margin-bottom: 45px;
 }
