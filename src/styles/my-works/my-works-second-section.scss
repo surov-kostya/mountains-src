@@ -1,21 +1,21 @@
-.my-works__second-section{
+.works__second-section{
     display: flex;
     flex-flow: column;
     min-height: calc(100vh - 186px);
 }
 
-.my-works-second-section__projects{
+.works-second-section__projects{
     flex:1 755px;
 }
 
-.my-works-second-section__title{
+.works-second-section__title{
     height:186px;
     background-color: #faf8f0;
     @include dis-fle-cen;
     position: relative;
 }
 
-.my-works-second-section__title-bg{
+.works-second-section__title-bg{
     position:absolute;
     top:50%;
     left:50%;
@@ -25,6 +25,6 @@
     height:155px;
 }
 
-.my-works-second-section__title-text{
+.works-second-section__title-text{
     @include font-h1;
 }

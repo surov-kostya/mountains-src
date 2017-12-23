@@ -2,14 +2,14 @@ extends ../template
 
 block title
     title Мои работы
-    - var page = 'my-works'
+    - var page = 'works'
 block content
-    section.my-works__second-section.my-works-second-section
-        .my-works-second-section__title
-            svg.my-works-second-section__title-bg
+    section.works__second-section.works-second-section
+        .works-second-section__title
+            svg.works-second-section__title-bg
                 use(xlink:href="./assets/icons/svg/symbols.svg#works_header")
-            .my-works-second-section__title-text Мои работы
-        .my-works-second-section__projects
+            .works-second-section__title-text Мои работы
+        .works-second-section__projects
             ul.projects
                 - var school = ['Сайт школы онлайн образования', 'HTML, CSS, JavaScript', '#', './assets/images/project-slider/school.png', 'active']
                 - var yoga = ['Сайт школы онлайн образования', 'HTML, CSS, JavaScript', '#', './assets/images/project-slider/yoga.png', 'visually-hidden']
@@ -36,12 +36,12 @@ block content
                                         svg.project-slider__button-arrow.project-slider__button-arrow_up
                                             use(xlink:href="./assets/icons/svg/symbols.svg#portf_arrow_up")
 
-    section.last-section.my-works__last-section.my-works-last-section
+    section.last-section.works__last-section.works-last-section
     
-        .my-works-last-section__title Что обо мне говорят
-            svg.my-works-last-section__title-bg
+        .works-last-section__title Что обо мне говорят
+            svg.works-last-section__title-bg
                 use(xlink:href="./assets/icons/svg/symbols.svg#about_header")
-        .my-works-last-section__reviews
+        .works-last-section__reviews
             ul.reviews
                 li.reviews__item
                     i(class="fa fa-quote-left fa-3x" aria-hidden="true")
@@ -69,19 +69,20 @@ block content
                         .review-user__about
                             .review-user__name Сабанцев Владимир
                             .review-user__position преподаватель
-        .my-works-last-section__form
-            form.my-works-last-section-form
-                .my-works-last-section-form__wrapper
-                    .my-works-last-section-form__inputs
-                        .my-works-last-section-form__title Связаться со мной
-                        input.my-works-last-section-form__name(type="text")
-                        input.my-works-last-section-form__email(type="email")
-                        textarea.my-works-last-section-form__comment
-                    .my-works-last-section-form__controls
-                        input.my-works-last-section-form__btn.my-works-last-section-form__btn_submit(type="submit" value="Отправить")
-                        input.my-works-last-section-form__btn.my-works-last-section-form__btn_reset(type="reset" value="Очистить")
-        a.my-works-last-section__arrow(href="#")
-            svg.my-works-last-section__arrow-up
+        .works-last-section__form
+            .works-last-section__blur
+            form.works-form
+                .works-form__wrapper
+                    .works-form__inputs
+                        .works-form__title Связаться со мной
+                        input.works-form__name(type="text" placeholder="Имя")
+                        input.works-form__email(type="email" placeholder="Email")
+                        textarea.works-form__comment(placeholder="Ваше сообщение")
+                    .works-form__controls
+                        input.works-form__btn.works-form__btn_submit(type="submit" value="Отправить")
+                        input.works-form__btn.works-form__btn_reset(type="reset" value="Очистить")
+        a.works-last-section__arrow(href="#")
+            svg.works-last-section__arrow-img
                 use(xlink:href="./assets/icons/svg/symbols.svg#portf_arrow_up")
 
         
