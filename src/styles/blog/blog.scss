@@ -7,6 +7,10 @@
 .blog-section__left{
     flex-basis:310px;
     text-align: right;
+
+    @include tablets{
+        display:none;
+    }
 }
 
 .blog-section__right{

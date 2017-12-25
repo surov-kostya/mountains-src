@@ -1,9 +1,10 @@
 .index-section{
-    // @include bg-image('../images/bg-index/bg-1200.jpg');
+    @include bg-image('../images/bg-index/bg-1200.jpg');
     display: flex;
     flex-flow:column;
     justify-content: space-between;
     align-items: center;
+    // min-height: 650px;
 }
 
 .index-section__top{

@@ -13,15 +13,15 @@ var postCssOptions = {map: true};
 
 gulp.task('sass', function () {
  return gulp.src('./src/styles/main.scss')
-   .pipe(sourcemaps.init())
-   .pipe(sass().on('error', sass.logError))
-  //  .pipe(px2rem(px2remOptions, postCssOptions))
-   .pipe(autoprefixer({
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))   
+    .pipe(px2rem(px2remOptions, postCssOptions))
+    .pipe(autoprefixer({
         browsers: ['last 2 versions'],
         cascade: false
     }))
-   .pipe(sourcemaps.write())
-   .pipe(gulp.dest('./build/assets/styles'));
+    .pipe(sourcemaps.write())   
+    .pipe(gulp.dest('./build/assets/styles'));
 });
 
 // ---------------- PUG -------------------
@@ -142,6 +142,6 @@ gulp.task('watch', function () {
 
 // ---------------- DEFAULT ----------------
 
-gulp.task('start', gulp.series('cleanBuild', gulp.parallel( 'copyImg', 'sass', 'pug', 'svgSprite', 'copyFonts')));
+gulp.task('start', gulp.series('cleanBuild', gulp.parallel( 'copyImg', 'sass', 'pug', 'svgSprite', 'copyFonts', 'webpack')));
 
 gulp.task('default', gulp.parallel('watch', 'browser-sync'));

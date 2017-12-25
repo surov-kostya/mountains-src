@@ -16,22 +16,32 @@ block content
                 - var design = ['Сайт школы онлайн образования', 'HTML, CSS, JavaScript', '#', './assets/images/project-slider/design.png', 'visually-hidden']
                 each slide in [school, yoga, design]
                     li.projects__item(class= slide[4])
-                        .projects__description.project-description
+                        .projects__left.project-description.project-description_outer
                             .project-description__title #{slide[0]}
                             .project-description__technologies #{slide[1]}
                             a.project-description__link(href="" +slide[2]) Посмотреть сайт
                                 svg.project-description__link-icon
                                     use(xlink:href="./assets/icons/svg/symbols.svg#link")
-                        .projects__slider.project-slider
+                        .projects__right.project-slider
                             img.project-slider__picture(src="" + slide[3])
+
+                            .project-description.project-description_inner
+                                .project-description__title #{slide[0]}
+                                .project-description__technologies #{slide[1]}
+                                a.project-description__link(href="" +slide[2]) Посмотреть сайт
+                                    svg.project-description__link-icon
+                                        use(xlink:href="./assets/icons/svg/symbols.svg#link")
+
                             .project-slider__controls
                                 a.project-slider__button.project-slider__button_prev(href="#")
-                                    img.project-slider__img(src="" +yoga[3])
+                                    .project-slider__bg(style=`background-image:url(${yoga[3]})`)
+                                        img.project-slider__img(class="visually-hidden" src="" +yoga[3])
                                     .project-slider__filter.project-slider__filter_prev
                                         svg.project-slider__button-arrow.project-slider__button-arrow_down
                                             use(xlink:href="./assets/icons/svg/symbols.svg#portf_arrow_down")
                                 a.project-slider__button.project-slider__button_next(href="#")
-                                    img.project-slider__img(src="" +design[3])
+                                    .project-slider__bg(style=`background-image:url(${design[3]})`)
+                                        img.project-slider__img(class="visually-hidden" src="" +design[3])
                                     .project-slider__filter.project-slider__filter_next
                                         svg.project-slider__button-arrow.project-slider__button-arrow_up
                                             use(xlink:href="./assets/icons/svg/symbols.svg#portf_arrow_up")

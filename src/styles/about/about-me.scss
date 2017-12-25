@@ -3,7 +3,14 @@
     flex-flow: column;
     justify-content: space-around;
     align-items:center;
+
+    
+    @include tv{
+        flex-flow: row;
+        align-items:flex-start;
+    }
 }
+
 
 .about-me__title{
     text-transform: uppercase;
@@ -11,6 +18,21 @@
     font-size:63px;
     color:$color-gray-dark;
     position:relative;
+    text-align: center;
+
+    @include tv{
+        flex: 1;
+        
+    }
+}
+
+.aboute-me__right{
+    display:flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items:center;
+    flex:1;
+    height:100%;
 }
 
 .about-me__title-img{
@@ -36,9 +58,23 @@
     background-image: url(../images/person-card/155312-600.jpg);
     background-position: center;
     background-size: cover;
+
+    @include tablets{
+        width:470px;
+        height: 415px;
+    }
 }
 
 .about-me__text{
     width:calc(100/600*443%);
+
+    @include tv{
+        width:443px;
+    }
+
+    @include tablets{
+        width: 470px;
+
+    }
 }
 

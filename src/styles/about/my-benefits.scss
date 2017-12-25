@@ -20,6 +20,10 @@
 .my-benefits__charts{
     align-self: flex-start;
     width:100%;
+
+    @include tablets{
+        text-align: center;
+    }
 }
 
 .my-benefits__direction{
@@ -36,6 +40,10 @@
     height: 111px;
     width:100%;
     margin-top: 18px;
+
+    @include tablets{
+        justify-content: center;
+    }
 }
 
 .my-benefits__technology{
@@ -51,4 +59,11 @@
     font-size: 13px;  
     color: $color-text-green;
     margin-right: 35px;
+}
+
+.my-benefits__text{
+    @include tablets{
+        width: 470px;
+        text-align: justify;
+    }
 }

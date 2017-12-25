@@ -1,3 +1,9 @@
+@mixin tv {
+    @media screen and (min-width: $tv){
+        @content;
+    }
+}
+
 @mixin tablets {
     @media screen and (max-width: $tablets){
         @content;

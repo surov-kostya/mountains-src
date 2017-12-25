@@ -5,18 +5,35 @@
     left:0;
     right:0;
     background-color: rgba(#373e42, .85);
+
+    @include tablets{
+        height: 210px;
+    }
+
+    @include phones{
+        height:260px;
+    }
 }
 
 .footer__part{
     height:50%;
     padding: 0 30px;
     display:flex;
+
+    @include tablets{
+        flex-flow:column;
+        justify-content: center;
+    }
 }
 
 .footer__top{
     border-bottom:1px solid #666c6e;
     justify-content: space-between;
     align-content: center;
+
+    @include tablets{
+        justify-content: space-around;
+    }
 }
 
 .footer-nav{
@@ -29,6 +46,14 @@
 
     &:hover{
         text-decoration: underline;
+    }
+
+    &:last-child{
+        margin-right: 0;
+    }
+
+    @include phones{
+        margin-right:10px;        
     }
 }
 
@@ -49,20 +74,24 @@
     display:flex;
     justify-content: flex-end;
     align-items: center;
+
+    @include tablets{
+        justify-content: center;
+    }
 }
 
 .footer-socials__item{
     @include dis-fle-cen;
-    height:38px;
-    width:38px;
+    height:calc(38*1px);
+    width:calc(38*1px);
     border-radius:50%;
     border: 1px solid rgba(white, .5);
     margin-left: 10px;
 }
 
 .footer-socials__img{
-    height:40px;
-    width:40px;
+    height:calc(40*1px);
+    width:calc(40*1px);
     fill: white;
 }
 
@@ -89,10 +118,19 @@
     display:flex;
     justify-content: space-between;
     align-items:center;
+
+    @include tablets{
+        justify-content: space-around;
+    }
 }
 
 .footer__text{
     flex-basis: 500px;
+
+    @include tablets{
+        flex-basis: auto;
+        text-align: center;
+    }
 
     p{
         color: rgba(white, .5);
@@ -104,8 +142,9 @@
 
 .footer__text_right{
     text-align: right;
-}
 
-// .last-section{
-//     padding-bottom: 148px;
-// }
+    @include tablets{
+        text-align: center;
+    }
+
+}

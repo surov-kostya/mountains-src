@@ -34,4 +34,8 @@
     &:hover{
         fill-opacity: 1;
     }
+
+    @include tablets{
+        margin-bottom: 285px;
+    }
 }

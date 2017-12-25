@@ -11,18 +11,19 @@ block content
                 h1 Обо мне
                 svg.about-me__title-img
                     use(xlink:href='./assets/icons/svg/symbols.svg#about_header')
-            .aboute-me__avatar
-                img.about-me__avatar-img.visually-hidden(src='./assets/images/person-card/155312-600.jpg')
-            .about-me__subtitle Кто я
-            .about-me__text
-                p.
-                    Я веб разработчик из Новосибирска. Мне 27 лет. 
-                    Я занимаюсь разработкой современных сайтов 
-                    и приложений. Мне нравится делать интересные 
-                    и современные проекты.
-                p.
-                    Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,
-                    как тут всё классно и красиво!
+            .aboute-me__right
+                .aboute-me__avatar
+                    img.about-me__avatar-img.visually-hidden(src='./assets/images/person-card/155312-600.jpg')
+                .about-me__subtitle Кто я
+                .about-me__text
+                    p.
+                        Я веб разработчик из Новосибирска. Мне 27 лет. 
+                        Я занимаюсь разработкой современных сайтов 
+                        и приложений. Мне нравится делать интересные 
+                        и современные проекты.
+                    p.
+                        Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,
+                        как тут всё классно и красиво!
         
         .about-second-section__right.my-benefits
             .my-benefits__title Чем я могу быть вам полезен
@@ -51,7 +52,7 @@ block content
         .about-last-section__contacts 
             .about-last-section__contacts-title Контакты
             ul.contacts
-                each item in [['skype','kostyan5685', "#skype"], ['mailto','surov.qostya@yandex.ru', "#envelope"], ['tel','+79211234567', "#phone"], ['address','Санкт-Петербург, Каменноостровский пр.', "#map_marker"]]
+                each item in [['skype','kostyan5685', "#skype"], ['mailto','surov.qostya@yandex.ru', "#envelope"], ['tel','+79211234567', "#phone"], ['address','Санкт-Петербург, ул. Опьтков', "#map_marker"]]
                     li.contacts__item(class="contacts__" + item[0])
                         a.contacts__link(class=`contacts__${item[0]}-link` href=`${item[0]}:${item[1]}`)
                             svg.contacts__icon
