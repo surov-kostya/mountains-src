@@ -1,12 +1,30 @@
 .reviews{
     display:flex;
     justify-content: center;
+
+    @include phones{
+        width:100vw;
+        flex-flow:column;
+        align-items: center;
+    }
 }
 
 .reviews__item{
     width:367px;
     max-width:50%;
     margin: 0 18px;
+
+    @include phones{
+        max-width:100%;
+        margin-bottom: 30px;
+    }
+
+    &:last-child{
+        @include phones{
+            margin-bottom:0;
+        }
+    }
+
     p{
         font-family: 'Roboto', sans-serif;
         font-size: 16px;
@@ -17,6 +35,11 @@
     i{
         color: rgba(#000, .2);
         margin-bottom:29px;
+
+        @include phones{
+            margin-bottom:19px;
+            
+        }
     }
 }
 

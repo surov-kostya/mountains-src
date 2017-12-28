@@ -24,6 +24,8 @@
         flex-flow: column;
         justify-content: space-between;
     }
+
+
 }
 
 .project-description{
@@ -33,6 +35,9 @@
     flex-flow:column;
     overflow:hidden;
 
+    @include phones{
+        padding: 30px 0;
+    }
 }
 
 .project-description_inner{
@@ -41,6 +46,11 @@
     @include tablets{
         display:initial;
         margin-bottom:60px;
+    }
+
+    @include phones{
+        background-color:#f0efe9;
+        margin-bottom:0;
     }
 }
 
@@ -98,17 +108,25 @@
     align-items:center;
     flex-flow: column;
     justify-content: space-between;
+
+    @include phones{
+        align-items:stretch;
+    }
 }
 
-.project-slider__picture{
+.project-slider__big-bg{
     width: 450px;
     height:305px;
+    background-size:contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    align-self:center;
     margin: 114px 0;
-
-    @include tablets{
-        margin-top:105px;
-        margin-bottom:100px;
-    }
+    
+        @include tablets{
+            margin-top:105px;
+            margin-bottom:100px;
+        }
 }
 
 .project-slider__controls{

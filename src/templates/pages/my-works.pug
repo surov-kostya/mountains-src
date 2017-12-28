@@ -23,7 +23,8 @@ block content
                                 svg.project-description__link-icon
                                     use(xlink:href="./assets/icons/svg/symbols.svg#link")
                         .projects__right.project-slider
-                            img.project-slider__picture(src="" + slide[3])
+                            .project-slider__big-bg(style=`background-image:url(${slide[3]})`)
+                                img.project-slider__picture.visually-hidden(src="" + slide[3])
 
                             .project-description.project-description_inner
                                 .project-description__title #{slide[0]}

@@ -10,6 +10,11 @@
     @include font-h1;
     @include dis-fle-cen;
     height:250px;
+
+    @include phones{
+        text-align: center;
+        margin-bottom:30px;
+    }
 }
 
 .works-last-section__title-bg{
