@@ -1,6 +1,7 @@
 .reviews{
     display:flex;
     justify-content: center;
+    flex-wrap:wrap;
 
     @include phones{
         width:100vw;
@@ -11,12 +12,23 @@
 
 .reviews__item{
     width:367px;
-    max-width:50%;
     margin: 0 18px;
+    display: flex;
+    flex-flow:column;
+    justify-content: space-between;
+
+    @include b-tablets{
+        width:336px;
+        margin: 0 17px;
+        max-width:47%;
+        margin-bottom: 30px;
+    }
 
     @include phones{
         max-width:100%;
-        margin-bottom: 30px;
+        
+        justify-content: center;
+        align-items: stretch;
     }
 
     &:last-child{
@@ -25,6 +37,9 @@
         }
     }
 
+}
+
+.reviews__text{
     p{
         font-family: 'Roboto', sans-serif;
         font-size: 16px;
@@ -38,7 +53,7 @@
 
         @include phones{
             margin-bottom:19px;
-            
+            text-align: center;
         }
     }
 }
@@ -53,6 +68,9 @@
     height:80px;
     border-radius: 50%;
     margin-right:25px;
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
 }
 
 .review-user__about{

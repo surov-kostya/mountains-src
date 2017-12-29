@@ -14,7 +14,6 @@
     @include bg-image('../images/bg-reviews/bg-reviews.png');
     z-index:-2;
     filter: blur(20px);
-    border-radius: 5px;
 }
 
 .works-form{
@@ -26,7 +25,7 @@
 .works-form__wrapper{
     width: 380px;
     height: 437px;
-    padding-top:40px;
+    padding-top:30px;
     display:flex;
     flex-flow: column;
     align-items: center;

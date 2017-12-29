@@ -29,18 +29,21 @@
     margin-bottom: 70px;
 }
 
+.works-last-section__arrow{
+    margin-bottom: 215px;
+
+    @include tablets{
+        margin-bottom: 285px;
+    }
+}
+
 .works-last-section__arrow-img{
     width:26px;
     height:18px;
     fill-opacity: .7;
     fill:white;
-    margin-bottom: 215px;
 
     &:hover{
         fill-opacity: 1;
-    }
-
-    @include tablets{
-        margin-bottom: 285px;
     }
 }

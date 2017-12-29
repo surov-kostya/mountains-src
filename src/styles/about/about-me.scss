@@ -55,14 +55,16 @@
 .aboute-me__avatar{
     width:443px;
     height: 391px;
-    background-image: url(../images/person-card/155312-600.jpg);
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
 
     @include tablets{
+        max-width:100%;
         width:470px;
         height: 415px;
     }
+
 }
 
 .about-me__text{
@@ -74,7 +76,10 @@
 
     @include tablets{
         width: 470px;
+    }
 
+    @include phones{
+        width:85%;
     }
 }
 

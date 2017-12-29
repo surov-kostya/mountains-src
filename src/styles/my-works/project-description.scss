@@ -1,0 +1,74 @@
+.project-description{
+    padding: 0 5%; 
+    text-align: center;
+    @include dis-fle-cen;
+    flex-flow:column;
+    overflow:hidden;
+
+    @include phones{
+        padding: 30px 0;
+    }
+}
+
+.project-description_inner{
+    display: none;
+
+    @include tablets{
+        display:initial;
+        margin-bottom:60px;
+    }
+
+    @include phones{
+        background-color:#f0efe9;
+        margin-bottom:0;
+    }
+}
+
+.project-description_outer{
+    @include tablets{
+        display: none;
+    }
+}
+
+.project-description__title{
+    @include font-h2;
+}
+
+.project-description__technologies{
+    min-height:53px;
+    @include dis-fle-cen;
+    color:$color-text-green;
+    border-top: 1px solid $color-text-green;
+    border-bottom: 1px solid $color-text-green;
+    align-self: stretch;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500; 
+    text-transform: uppercase;
+    margin: 40px 0;
+}
+
+.project-description__link{
+    display: inline-block;
+    text-decoration: none;
+    color:white;
+    padding: 20px 38px 20px 49px;
+    background-color: $color-text-green;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    position:relative;
+
+    &:hover{
+        background-color: darken($color-text-green, 5%);
+    }
+}
+
+.project-description__link-icon{
+    position: absolute;
+    top:18px;
+    left:18px;
+    width:20px;
+    height:20px;
+}

@@ -52,17 +52,20 @@ a{
 	position: relative;
 	width:100%;
 	overflow: hidden;
-	min-height: 100%;
+	min-height: 650px;
 
 	&__empty{
 		height: 214px;
+
+		@include tablets{
+			height: 285px;
+		}
 	}
 }
 
 section{
 	position:relative;
 	min-height: 100vh;
-	// min-height: 650px;
 	width: 100%;
 }
 

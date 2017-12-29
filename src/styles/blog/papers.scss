@@ -1,7 +1,26 @@
 .papers__item{
     margin-top: 140px;
 
+    @include tablets{
+        margin-top:43px;
+    }
+
+    &:after{
+        content:"";
+        display:block;
+        margin-top:50px;
+        width:100%;
+        height:5px;
+        background-color: rgba(#393e42, .3);
+    }
+
     &:first-child{
         margin-top:0;
+    }
+
+    &:last-child{
+        &:after{
+            display:none;
+        }
     }
 }

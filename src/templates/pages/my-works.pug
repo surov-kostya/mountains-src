@@ -55,31 +55,34 @@ block content
         .works-last-section__reviews
             ul.reviews
                 li.reviews__item
-                    i(class="fa fa-quote-left fa-3x" aria-hidden="true")
-                    p.
-                        Этот парень проходил обучение веб-разработке 
-                        не где-то, а в LoftSchool! 5 месяцев только самых 
-                        тяжелых испытаний и бессонных ночей!
+                    .reviews__text
+                        i(class="fa fa-quote-left fa-3x" aria-hidden="true")
+                        p.
+                            Этот парень проходил обучение веб-разработке 
+                            не где-то, а в LoftSchool! 5 месяцев только самых 
+                            тяжелых испытаний и бессонных ночей!
                     .reviews__user.review-user
-                        .review-user__avatar
-                            img.review-user__avatar-img(src="./assets/images/reviews/kovalchuk.png")
+                        .review-user__avatar(style="background-image:url(./assets/images/reviews/kovalchuk.png)")
+                            img.review-user__avatar-img.visually-hidden(src="./assets/images/reviews/kovalchuk.png")
                         .review-user__about
                             .review-user__name Ковальчук Дмитрий
                             .review-user__position основатель Loftschool
 
             
                 li.reviews__item
-                    i(class="fa fa-quote-left fa-3x" aria-hidden="true")
-                    p.
-                        Этот код выдержит любые испытания. Только 
-                        пожалуйста, не загружается сайт на слишком 
-                        старых браузерах!
+                    .reviews__text
+                        i(class="fa fa-quote-left fa-3x" aria-hidden="true")
+                        p.
+                            Этот код выдержит любые испытания. Только 
+                            пожалуйста, не загружается сайт на слишком 
+                            старых браузерах!
                     .reviews__user.review-user
-                        .review-user__avatar
-                            img.review-user__avatar-img(src="./assets/images/reviews/sabantsev.png")
+                        .review-user__avatar(style="background-image:url(./assets/images/reviews/sabantsev.png)")
+                            img.review-user__avatar-img.visually-hidden(src="./assets/images/reviews/sabantsev.png")
                         .review-user__about
                             .review-user__name Сабанцев Владимир
                             .review-user__position преподаватель
+
         .works-last-section__form#works-last-section__form
             .works-last-section__blur#works-last-section__blur
             form.works-form
@@ -90,8 +93,8 @@ block content
                         input.works-form__email(type="email" placeholder="Email")
                         textarea.works-form__comment(placeholder="Ваше сообщение")
                     .works-form__controls
-                        input.works-form__btn.works-form__btn_submit(type="submit" value="Отправить")
-                        input.works-form__btn.works-form__btn_reset(type="reset" value="Очистить")
+                        button.works-form__btn.works-form__btn_submit(type="submit" value="Отправить")
+                        button.works-form__btn.works-form__btn_reset(type="reset" value="Очистить")
         a.works-last-section__arrow(href="#")
             svg.works-last-section__arrow-img
                 use(xlink:href="./assets/icons/svg/symbols.svg#portf_arrow_up")

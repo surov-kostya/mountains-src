@@ -1,10 +1,18 @@
 .my-benefits{
-    padding-left:calc(100/600*40%);
+    padding-left:calc(100/600*15%);
     padding-right:calc(100/600*10%);
     display:flex;
     flex-flow: column;
     justify-content: space-around;
     align-items:center;
+
+    @include tv{
+        padding-left:calc(100/600*40%);
+    }
+
+    @include a-desktop{
+        padding-left:5px;
+    }
 }
 
 .my-benefits__title{
@@ -31,18 +39,22 @@
     font-weight: 500;
     font-size: 28px;
     width:100%;
-    margin-bottom:40px;    
+    margin-bottom:30px;    
 }
 
 .my-benefits__technologies{
     display:flex;
     justify-content: flex-start;
-    height: 111px;
+    flex-wrap:wrap;
     width:100%;
     margin-top: 18px;
 
     @include tablets{
         justify-content: center;
+    }
+
+    @include b-phones{
+        justify-content: space-around;
     }
 }
 
@@ -59,6 +71,15 @@
     font-size: 13px;  
     color: $color-text-green;
     margin-right: 35px;
+    margin-bottom: 10px;
+
+    &:last-child{
+        margin-right:0;
+    }
+
+    @include b-phones{
+        margin-right:0;        
+    }
 }
 
 .my-benefits__text{

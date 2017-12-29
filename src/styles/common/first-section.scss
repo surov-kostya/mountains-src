@@ -1,8 +1,18 @@
 .first-section{
-    @include bg-image('../images/bg-top/bg-1800.jpg');
+    @include bg-image('../images/bg-top/bg-1200.jpg');
     display:flex;
     flex-flow:column;
     justify-content: space-between;
+
+    @include tv{
+        background-image:url('../images/bg-top/bg-1800.jpg');
+    }
+    @include tablets{
+        background-image:url('../images/bg-top/bg-768.jpg');
+    }
+    @include iphone{
+        background-image:url('../images/bg-top/bg-320.jpg');
+    }
 }
 
 .first-section__header{
@@ -14,11 +24,20 @@
 .first-section__angles{
     height: 160px;
     display:flex;
+    margin-bottom: -1px;
+
+    @include b-tablets{
+        height: 66px;
+    }
+
+    @include iphone{
+        height:28px;
+    }
 }
 
 .first-section__angle-block{
     width:50%;
-    height:100%;    
+    height:100%; 
 
     &_left{
         background-color:$color-left-side;
@@ -33,6 +52,10 @@
 
 .works .first-section__angle-block{
     background-color:#faf8f0;
+}
+
+.blog .first-section__angle-block{
+    background-color:white;
 }
 
 

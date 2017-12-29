@@ -4,7 +4,6 @@
     flex-flow:column;
     justify-content: space-between;
     align-items: center;
-    // min-height: 650px;
 }
 
 .index-section__top{
@@ -59,8 +58,6 @@
 }
 
 .index-panel__person-card{
-    height:220px;
-
 
     .person-card__name, .person-card__text{
         color: $color-text-gray;
@@ -124,7 +121,13 @@
 
 .index-section__bottom{
     margin-bottom: 30px;
+    margin-top: 420px;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     color:white;
+
+
+    @include phones{
+        text-align:center;
+    }
 }
