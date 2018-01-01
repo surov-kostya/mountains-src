@@ -1,4 +1,4 @@
-.index-parallax{
+.first-parallax{
     @include bg-image('../images/bg-index/bg-1200.jpg');
     position: absolute;
     top:0;
@@ -10,7 +10,7 @@
     z-index: -1;
 }
 
-.index-parallax__layer{
+.first-parallax__layer{
     height:calc(1500*1px);
     width: calc(2200*1px);
     @include abs-center;
@@ -30,7 +30,7 @@
     }
 }
 
-.index-parallax__img{
+.first-parallax__img{
     position: absolute;
     left:0;
     bottom:0;
@@ -45,7 +45,7 @@
     }
 }
 
-.index-parallax__img_0{
+.first-parallax__img_0{
     bottom:auto;
     top:0;
 }

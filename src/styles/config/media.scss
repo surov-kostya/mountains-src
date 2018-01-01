@@ -4,6 +4,18 @@
     }
 }
 
+@mixin b-desktop{
+    @media screen and (max-width: $b-desktop){
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media screen and (max-width: $desktop){
+        @content;
+    }
+}
+
 @mixin a-desktop{
     @media screen and (max-width: $a-desktop){
         @content;

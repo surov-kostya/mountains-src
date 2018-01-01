@@ -1,11 +1,22 @@
-// const indexParallax = document.querySelector('.index-parallax');
-// const indexParallaxLayers = indexParallax.children;
+const indexParallaxLayers = document.querySelectorAll('.index-parallax__img');
 
-// const moveLayers = e =>{
-//     const initialX = (window.innerWidth / 2) - e.pageX;
-//     const initialY = (window.innerWidth / 2) - e.pageY;
-//     indexParallaxLayers[6].style.transform = `translate(${initialX}px, ${initialY}px)`;
-//     console.log(indexParallaxLayers);
-// }
+const moveLayers = e =>{
+    const initialX = (window.innerWidth / 2) - e.pageX;
+    const initialY = (window.innerHeight / 2) - e.pageY;
+    let k = 1;
+    for(let i=0; i<indexParallaxLayers.length; i++){
+        if(i <= 2) {
+            k = i + 20;
+        } else if (i <= 4) {
+            k = i * 4;
+        } else if (i <=5 ){
+            k = i * 3;
+        } else {k = i*2};
+        
+        let finalX = initialX / k;
+        let finalY = initialY / (k/ 1.5);
+        indexParallaxLayers[i].style.transform = `translate(${finalX}px, ${finalY}px)`;
+    };
+}
 
-// window.addEventListener('mousemove', moveLayers);
+window.addEventListener('mousemove', moveLayers);
