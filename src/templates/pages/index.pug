@@ -11,7 +11,7 @@ block content
             button.index-section__auth-btn(type="button") Авторизоваться
         .index-section__center
 
-            .index-panel.index-panel_first.visually-hidden
+            .index-panel.index-panel_first
                 .index-panel__top 
                     .index-panel__person-card
                         block person-card
@@ -51,8 +51,6 @@ block content
                                 label.auth-form__radio-block(for="robot")
                                     input.auth-form__human-radio.visually-hidden(type="radio" name="robot" value="not-robot" id="robot")
                                     .auth-form__human-radio-title Не уверен
-                                
-
                 .index-panel__bottom
                     a.index-panel__btn.index-panel__btn_index(href="#") На главную
                     a.index-panel__btn.index-panel__btn_enter(href="#") Войти

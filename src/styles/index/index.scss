@@ -3,6 +3,7 @@
     flex-flow:column;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .index-section__top{
@@ -29,8 +30,32 @@
     }
 }
 
+.index-section__center{
+    @include abs-center;
+    perspective: 1000px;
+}
+
 .index-panel{
     @include abs-center;
+    backface-visibility: hidden;
+    transition: .8s;
+
+    &_second{
+        transform: translate(-50%, -50%) rotateY(180deg);
+    }
+    
+}
+
+
+
+.flipper{
+    .index-panel_first{
+        transform: translate(-50%, -50%) rotateY(180deg);
+        
+    }
+    .index-panel_second{
+        transform: translate(-50%, -50%) rotateY(0deg);
+    }
 }
 
 .index-panel__top{
@@ -115,6 +140,10 @@
 
 .index-panel__btn_blog{
     flex-basis: 25%;
+}
+
+.index-panel__btn_index{
+    border-right: 1px solid white;
 }
 
 .index-section__bottom{
