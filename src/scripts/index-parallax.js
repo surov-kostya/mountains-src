@@ -19,4 +19,6 @@ const moveLayers = e =>{
     };
 }
 
-window.addEventListener('mousemove', moveLayers);
+if (indexParallaxLayers !== null){
+    window.addEventListener('mousemove', moveLayers);
+};

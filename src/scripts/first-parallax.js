@@ -20,4 +20,6 @@ const moveLayers = e =>{
     };
 };
 
-window.addEventListener('scroll', moveLayers);
+if (firstParallaxLayers !== null){
+    window.addEventListener('scroll', moveLayers);
+};

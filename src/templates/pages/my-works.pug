@@ -11,20 +11,34 @@ block content
             .works-second-section__title-text Мои работы
         .works-second-section__projects
             ul.projects
-                - var school = ['Сайт школы онлайн образования', 'HTML, CSS, JavaScript', '#', './assets/images/project-slider/school.png', 'active']
-                - var yoga = ['Сайт школы онлайн образования', 'HTML, CSS, JavaScript', '#', './assets/images/project-slider/yoga.png', 'visually-hidden']
-                - var design = ['Сайт школы онлайн образования', 'HTML, CSS, JavaScript', '#', './assets/images/project-slider/design.png', 'visually-hidden']
+                - var schoolPic = './assets/images/project-slider/school.png'
+                - var schoolTech = 'HTML, CSS, JavaScript'
+                - var schoolLink = '#'
+                - var schoolDesc = 'Сайт школы онлайн образования'
+                - var yogaPic = './assets/images/project-slider/yoga.png'
+                - var yogaTech = 'HTML, CSS, JavaScript'
+                - var yogaLink = '#'
+                - var yogaDesc = 'Сайт йоги'
+                - var designPic = './assets/images/project-slider/design.png'
+                - var designTech = 'HTML, CSS, JavaScript'
+                - var designLink = '#'
+                - var designDesc = 'Сайт дизайна'
+                - var school = [schoolDesc, schoolTech, schoolLink, schoolPic, '"school"', designPic, yogaPic]
+                - var yoga = [yogaDesc, yogaTech, yogaLink, yogaPic, '"yoga"', schoolPic, designPic]
+                - var design = [designDesc, designTech, designLink, designPic, '"design"', yogaPic, schoolPic]
                 each slide in [school, yoga, design]
-                    li.projects__item(class= slide[4])
+                
+                    li.projects__item(v-show=`status === ${slide[4]}` data-project= `${slide[4]}`)
                         .projects__left.project-description.project-description_outer
-                            .project-description__title #{slide[0]}
-                            .project-description__technologies #{slide[1]}
+                            .project-description__title.animated.fadeIn #{slide[0]}
+                            .project-description__technologies.animated.fadeIn #{slide[1]}
                             a.project-description__link(href="" +slide[2]) Посмотреть сайт
                                 svg.project-description__link-icon
                                     use(xlink:href="./assets/icons/svg/symbols.svg#link")
                         .projects__right.project-slider
-                            .project-slider__big-bg(style=`background-image:url(${slide[3]})`)
-                                img.project-slider__picture.visually-hidden(src="" + slide[3])
+                            transition(mode="out-in" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut")
+                                .project-slider__big-bg(v-show=`status === ${slide[4]}` style=`background-image:url(${slide[3]})`)
+                                    img.project-slider__picture.visually-hidden(src="" + slide[3])
 
                             .project-description.project-description_inner
                                 .project-description__title #{slide[0]}
@@ -34,15 +48,17 @@ block content
                                         use(xlink:href="./assets/icons/svg/symbols.svg#link")
 
                             .project-slider__controls
-                                a.project-slider__button.project-slider__button_prev(href="#")
-                                    .project-slider__bg(style=`background-image:url(${yoga[3]})`)
-                                        img.project-slider__img(class="visually-hidden" src="" +yoga[3])
+                                button.project-slider__button.project-slider__button_prev(@click.prevent="prevBtnClick")
+                                    transition(mode="out-in" enter-active-class="animated slideInDown" leave-active-class="animated slideInUp")
+                                        .project-slider__bg.project-slider__bg_prev(v-show=`status === ${slide[4]}` style=`background-image:url(${slide[5]})`)
+                                            img.project-slider__img(class="visually-hidden" src="" +slide[5])
                                     .project-slider__filter.project-slider__filter_prev
                                         svg.project-slider__button-arrow.project-slider__button-arrow_down
                                             use(xlink:href="./assets/icons/svg/symbols.svg#portf_arrow_down")
-                                a.project-slider__button.project-slider__button_next(href="#")
-                                    .project-slider__bg(style=`background-image:url(${design[3]})`)
-                                        img.project-slider__img(class="visually-hidden" src="" +design[3])
+                                button.project-slider__button.project-slider__button_next(@click.prevent="nextBtnClick")
+                                    transition(mode="out-in" enter-active-class="animated slideInUp" leave-active-class="animated slideInDown")
+                                        .project-slider__bg.project-slider__bg_next(v-show=`status === ${slide[4]}` style=`background-image:url(${slide[6]})`)
+                                            img.project-slider__img(class="visually-hidden" src="" +slide[6])
                                     .project-slider__filter.project-slider__filter_next
                                         svg.project-slider__button-arrow.project-slider__button-arrow_up
                                             use(xlink:href="./assets/icons/svg/symbols.svg#portf_arrow_up")

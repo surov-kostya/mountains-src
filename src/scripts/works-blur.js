@@ -1,6 +1,6 @@
-
 const blur = document.getElementById('works-last-section__blur');
 const text = document.getElementById('works-last-section__form');
+const winObj = window;
 
 function positionSearch() { 
     let topIndent = text.offsetTop;
@@ -11,6 +11,6 @@ function positionSearch() {
 };
 
 if (text != null) {
-    positionSearch()
-    window.addEventListener('resize', ()=>positionSearch() );
+    positionSearch();
+    winObj.addEventListener('resize', ()=>positionSearch() );
 };
