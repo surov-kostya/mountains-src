@@ -8,5 +8,5 @@
 
 **Ссылка на репозиторий**: https://github.com/surov-kostya/mountains-src.git
 
-**Ссылка на сайт**:  https://surov-kostya.github.io/mountaines/
+**Ссылка на сайт**:  https://surov-kostya.github.io/mountains/
 
