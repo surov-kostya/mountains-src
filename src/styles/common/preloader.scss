@@ -1,8 +1,18 @@
 .preloader{
-    @include abs-center;
+    position: fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    right:0;
     z-index:10;
-    background-color: rgba(100, 227, 100, 0.5);
+    background-color: $color-text-green;
+
+    &_opacity{
+        background-color: rgba($color-text-green, 0.5);
+    }
 }
+
+
 
 .preloader__spinner{
     @include abs-center;

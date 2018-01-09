@@ -7,23 +7,24 @@ section.preloader
         .preloader__ring.preloader__ring_lit
 
 script.
-
+    const preloader = document.querySelector('.preloader');
     const spinnerText = document.querySelector('.preloader__percent');
     let percent = 0;
 
     spinnerText.innerText = percent + '%';
 
     document.onreadystatechange = ()=>{
-        console.log(document.readyState)
         if (document.readyState === 'interactive'){
             let interval = setInterval(()=>{
                 percent++;
                 spinnerText.innerText = percent + '%';
                 if(percent > 98 || document.readyState !== 'interactive'){
+                    preloader.classList.add('preloader_opacity');
                     clearTimeout(interval);
                 };
-            }, 500);        
+            }, 300);        
         } else {
             percent = 99;
-            spinnerText.innerText = percent + '%'};     
+            spinnerText.innerText = percent + '%';
+            preloader.classList.add('visually-hidden');};
     };

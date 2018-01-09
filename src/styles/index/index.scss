@@ -4,10 +4,14 @@
     justify-content: space-between;
     align-items: center;
     
+    .flipInX{
+        display:initial;
+    }
 }
 
 .index-section__top{
     align-self: flex-end;
+    flex-basis: 70px;
 }
 
 .index-section__auth-btn{
@@ -30,9 +34,13 @@
     }
 }
 
+
 .index-section__center{
-    @include abs-center;
-    perspective: 1000px;
+    width:100px;
+    height: 100px;
+    position: relative;
+    perspective: 1000px;   
+    display:none; 
 }
 
 .index-panel{
@@ -43,7 +51,6 @@
     &_second{
         transform: translate(-50%, -50%) rotateY(180deg);
     }
-    
 }
 
 .flipper{
@@ -146,7 +153,7 @@
 
 .index-section__bottom{
     margin-bottom: 30px;
-    margin-top: 420px;
+    // margin-top: 420px;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     color:white;
