@@ -1,0 +1,29 @@
+section.preloader
+
+    .preloader__spinner
+        .preloader__percent
+        .preloader__ring.preloader__ring_big
+        .preloader__ring.preloader__ring_mid
+        .preloader__ring.preloader__ring_lit
+
+script.
+
+    const spinnerText = document.querySelector('.preloader__percent');
+    let percent = 0;
+
+    spinnerText.innerText = percent + '%';
+
+    document.onreadystatechange = ()=>{
+        console.log(document.readyState)
+        if (document.readyState === 'interactive'){
+            let interval = setInterval(()=>{
+                percent++;
+                spinnerText.innerText = percent + '%';
+                if(percent > 98 || document.readyState !== 'interactive'){
+                    clearTimeout(interval);
+                };
+            }, 500);        
+        } else {
+            percent = 99;
+            spinnerText.innerText = percent + '%'};     
+    };

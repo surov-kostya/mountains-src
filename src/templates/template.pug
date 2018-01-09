@@ -7,9 +7,11 @@ html(lang="ru")
         link(rel="icon" href="./assets/images/favicon.png" type="image/x-icon")
         link(rel="stylesheet", href="./assets/styles/main.css")
         link(href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&amp;subset=cyrillic-ext" rel="stylesheet")
-        block title
+        block title       
         
     body
+        block preloader
+            include ./common/preloader
         .wrapper
             .maincontent(class= page)
                 block first-section
@@ -26,5 +28,4 @@ html(lang="ru")
                 default
                     block footer 
                         include ./common/footer
-        block javascript
-            include ./common/javascript.pug
+        

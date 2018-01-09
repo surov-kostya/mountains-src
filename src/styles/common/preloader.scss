@@ -1,0 +1,55 @@
+.preloader{
+    @include abs-center;
+    z-index:10;
+    background-color: rgba(100, 227, 100, 0.5);
+}
+
+.preloader__spinner{
+    @include abs-center;
+    width:300px;
+    height:300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preloader__percent{
+    @include font-reg;
+    color:white;
+    text-align: center;
+}
+
+.preloader__ring{
+    position:absolute;
+    border: 3px solid transparent;
+    border-radius:50%;
+    border-top-color:white;
+    border-bottom-color:white
+}
+
+.preloader__ring_big{
+    width:240px;
+    height:240px;
+    animation: spinner 4s linear infinite;
+}
+
+.preloader__ring_mid{
+    width:200px;
+    height:200px;
+    animation: spinner 2s linear infinite;
+}
+
+.preloader__ring_lit{
+    width:170px;
+    height:170px;
+    animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
