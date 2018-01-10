@@ -7,7 +7,7 @@ const moveLayers = e =>{
     for(let i=0; i<indexParallaxLayers.length; i++){
         k = i*5;        
         let finalX = initialX / k;
-        let finalY = initialY / k / 1.8;
+        let finalY = initialY / k / 5;
         indexParallaxLayers[i].style.transform = `translate(${finalX}px, ${finalY}px)`;
     };
 }
