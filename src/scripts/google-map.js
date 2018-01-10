@@ -3,6 +3,7 @@ function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 59.953224, lng: 30.314344},
         zoom: 12,
+        gestureHandling: 'none',
         // disableDefaulUI: true,
         fullscreenControl: false,
         mapTypeControl: false,
@@ -206,7 +207,8 @@ function initMap() {
         map: map,
         title: 'Hello World!',
         icon: 'assets/images/map/map_marker.svg',
-        // label: 'Санкт-Петербург, Приморский район. Здесь Вы можете встретить меня чаще, чем где-либо.'
+        // label: 'Я здесь',
+        title: 'Я здесь'
     });
 }
 window.initMap = initMap;
