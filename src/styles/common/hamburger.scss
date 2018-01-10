@@ -1,5 +1,12 @@
 .hamburger{
     z-index:20;
+
+    &:hover{
+        .hamburger__block{
+            background-color: white;
+        }
+    }
+    
 }
 
 .hamburger__button{
@@ -16,7 +23,7 @@
 
 .hamburger__block{
     height:5px;
-    background-color: white;
+    background-color: rgba(white, .5);
     border-radius:2px;
     margin-bottom:10px;
     transition: .3s;

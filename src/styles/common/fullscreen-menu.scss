@@ -5,7 +5,6 @@
     height: 100vh;
     z-index:10;
     @include dis-fle-cen;
-    // display:none;
 }
 
 .fullscreen-menu__list{
@@ -31,7 +30,7 @@
         top:50%;
         transform: translateY(-50%);
         left: -30px;
-        display:none;
+        opacity: 0;
     }
 
     &:after{
@@ -44,12 +43,13 @@
         top:50%;
         transform: translateY(-50%);
         right: -30px;
-        display:none;
+        opacity: 0;
     }
 
     &:hover{
         &:before, &:after{
-            display:initial;
+            transition: opacity .5s;
+            opacity:1;
         }
     }
 }
