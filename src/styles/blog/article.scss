@@ -2,7 +2,7 @@
     font-family: 'bernier_regular';
     font-size: 35px;
     margin-bottom: 28px;
-    color: $color-text-gray;
+    color: $color-gray;
 
     @include tablets{
         margin-bottom: 17px;
@@ -10,7 +10,7 @@
 }
 
 .article__date{
-    color: rgba($color-text-green, .7);
+    color: rgba($color-green, .7);
     font-family: 'Roboto';
     font-weight: 400;
     font-size: 16px;

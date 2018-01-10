@@ -43,7 +43,7 @@
     p{
         font-family: 'Roboto', sans-serif;
         font-size: 16px;
-        color:$color-text-gray;
+        color:$color-gray;
         line-height: 26px;
     }
 
@@ -76,7 +76,7 @@
 .review-user__about{
     display:flex;
     flex-flow: column;
-    color: $color-text-green;
+    color: $color-green;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     justify-content: center;

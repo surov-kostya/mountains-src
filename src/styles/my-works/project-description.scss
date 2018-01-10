@@ -37,9 +37,9 @@
 .project-description__technologies{
     min-height:53px;
     @include dis-fle-cen;
-    color:$color-text-green;
-    border-top: 1px solid $color-text-green;
-    border-bottom: 1px solid $color-text-green;
+    color:$color-green;
+    border-top: 1px solid $color-green;
+    border-bottom: 1px solid $color-green;
     align-self: stretch;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -53,7 +53,7 @@
     text-decoration: none;
     color:white;
     padding: 20px 38px 20px 49px;
-    background-color: $color-text-green;
+    background-color: $color-green;
     border-radius: 5px;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -61,7 +61,7 @@
     position:relative;
 
     &:hover{
-        background-color: darken($color-text-green, 5%);
+        background-color: darken($color-green, 5%);
     }
 }
 

@@ -6,8 +6,21 @@
     padding: 15px 17px 15px 0;
 
     &_active{
-        border-right:3px solid $color-text-green;
-        color: $color-text-green;
-        font-weight: 700;
+        border-right:3px solid $color-green;        
     }
+}
+
+.article-names__link{
+    @include font-reg; 
+
+    &:hover{
+        color: $color-gray-dark;
+    }
+}
+
+.article-names__item_active{
+    .article-names__link{
+        color: $color-green;
+        font-weight: 700;
+    }    
 }

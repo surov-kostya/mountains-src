@@ -5,10 +5,10 @@
     bottom:0;
     right:0;
     z-index:10;
-    background-color: $color-text-green;
+    background-color: $color-green;
 
     &_opacity{
-        background-color: rgba($color-text-green, 0.5);
+        background-color: rgba($color-green, 0.5);
     }
 }
 

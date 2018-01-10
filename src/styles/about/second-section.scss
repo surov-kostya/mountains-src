@@ -1,6 +1,6 @@
 .about-second-section{
     display:flex;
-    color: $color-text-gray;
+    color: $color-gray;
 
     &__left{
         width:50%;
@@ -31,7 +31,7 @@
     font-family: 'Roboto', sans-serif;
     font-size:16px;
     line-height:24px;
-    color:$color-text-gray;
+    color:$color-gray;
     margin: 10px 0;
 
     @include tablets{

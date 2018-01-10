@@ -29,7 +29,7 @@
     align-self: flex-end;
 
     &:hover{
-        color: $color-text-green;
+        color: $color-green;
         background-color: white;
     }
 }
@@ -78,9 +78,9 @@
     }
 
     .socials__img{
-        fill:$color-text-green;
+        fill:$color-green;
         &:hover{
-            fill: darken($color-text-green, 20%);
+            fill: darken($color-green, 20%);
         }
     }
 }
@@ -88,7 +88,7 @@
 .index-panel__person-card{
 
     .person-card__name, .person-card__text{
-        color: $color-text-gray;
+        color: $color-gray;
     }
 
     .person-card__name{
@@ -108,7 +108,7 @@
 }
 
 .index-panel__btn{
-    background-color: rgba($color-text-green, .85);
+    background-color: rgba($color-green, .85);
     height:100%;
     flex: 1;
     text-align: center;
@@ -120,7 +120,7 @@
     font-weight: 500;
 
     &:hover{
-        background-color: darken($color-text-green, 10%);
+        background-color: darken($color-green, 10%);
     }
 
     &:first-child{
