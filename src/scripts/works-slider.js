@@ -13,7 +13,6 @@ if (document.querySelectorAll('.projects__item').length){
                 for(let i=0; i<this.ul.length; i++){
                     let attr = this.ul[i].getAttribute('data-project')
                     attr= attr.slice(1, -1)
-                    console.log(attr)
                     attrList.push(attr)                
                 }            
                 return attrList

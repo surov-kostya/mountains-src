@@ -4,11 +4,13 @@ const indexCenter = document.querySelector('.index-section__center');
 const indexPanel = document.querySelector('.index-panel');
 
 
-window.onload = ()=>{
-    indexCenter.classList.add('flipInX');
-};
+
 
 if (authBtn !== null){
+    
+    window.onload = ()=>{
+        indexCenter.classList.add('flipInX');
+    };
 
     authBtn.addEventListener('click', ()=>{
         authBtn.classList.add('visually-hidden');

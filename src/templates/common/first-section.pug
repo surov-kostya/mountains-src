@@ -1,6 +1,10 @@
 block parallax
     include first-parallax
 section.first-section
+
+    block fullscreen-menu
+        include fullscreen-menu
+
     header.first-section__header.header
         .header__socials
             block socials
@@ -12,6 +16,7 @@ section.first-section
                     input.hamburger__input(type="checkbox").visually-hidden
                     each position in ['top', 'center', 'bottom']
                         .hamburger__block(class='hamburger__block_' + position)
+    
     .first-section__title
         svg.first-section__title-img
             use(xlink:href='./assets/icons/svg/symbols.svg#portfolio_header')

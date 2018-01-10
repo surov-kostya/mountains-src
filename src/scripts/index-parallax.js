@@ -6,12 +6,12 @@ const moveLayers = e =>{
     let k = 1;
     for(let i=0; i<indexParallaxLayers.length; i++){
         if(i <= 2) {
-            k = i + 20;
+            k = i + 30;
         } else if (i <= 4) {
-            k = i * 5;
+            k = i * 7;
         } else if (i <=5 ){
             k = i * 4;
-        } else {k = i};
+        } else {k = i * 2};
         
         let finalX = initialX / k;
         let finalY = initialY / k / 1.8;
