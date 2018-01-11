@@ -6,11 +6,11 @@ const indexPanel = document.querySelector('.index-panel');
 
 
 
-if (authBtn !== null){
+if (document.querySelector('.index-section__auth-btn') !== null){
     
-    window.onload = ()=>{
+    window.addEventListener('load', ()=>{
         indexCenter.classList.add('flipInX');
-    };
+    });
 
     authBtn.addEventListener('click', ()=>{
         authBtn.classList.add('visually-hidden');
@@ -21,4 +21,5 @@ if (authBtn !== null){
         authBtn.classList.remove('visually-hidden');
         indexCenter.classList.remove('flipper');
     });
+    
 };
