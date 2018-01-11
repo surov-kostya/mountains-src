@@ -25,6 +25,13 @@
     text-align:center;
 }
 
+.my-benefits__text{
+    @include tablets{
+        width: 470px;
+        text-align: justify;
+    }
+}
+
 .my-benefits__charts{
     align-self: flex-start;
     width:100%;
@@ -59,19 +66,67 @@
 }
 
 .my-benefits__technology{
-    width:111px;
-    flex-shrink:0;
-    height:111px;
+    position:relative;
+    width:110px;
+    height:110px;
+    margin-right: 35px;
+    margin-bottom: 10px;
+    flex-shrink:0;    
+
+}
+
+.my-benefits__progress{
+    position: absolute;
+    top:0;
+    left:0;
+    width:0px;
+    height:0px;
     border-radius:50%;
-    border:21px solid #dfdcd5;
+    border-right: 55px solid transparent;
+    border-bottom: 55px solid transparent;
+    transform: rotate(-45deg);
+
+
+    &_empty-left{
+        border-top:55px solid #dfdcd5;
+        border-left:55px solid #dfdcd5;
+    }
+
+    &_empty-right{
+        border:55px solid transparent;
+        border:55px solid transparent;
+        border-bottom:55px solid #dfdcd5;
+        border-right:55px solid #dfdcd5;
+    }
+
+    &_filled{
+        border-top:55px solid $color-green;
+        border-left:55px solid $color-green;
+        transition: 3s ease-in;
+    }
+
+    @for $i from 1 through 100{        
+        &_#{$i} {transform: rotate((3.6*$i - 45deg));}
+    }
+    
+}
+
+
+
+
+
+.my-benefits__tech-name{
+    @include abs-center;
     @include dis-fle-cen;
+    border-radius:50%;    
+    width:70px;
+    height:70px;
+    background-color: #eeebdf;    
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 13px;  
     color: $color-green;
-    margin-right: 35px;
-    margin-bottom: 10px;
 
     &:last-child{
         margin-right:0;
@@ -82,9 +137,5 @@
     }
 }
 
-.my-benefits__text{
-    @include tablets{
-        width: 470px;
-        text-align: justify;
-    }
-}
+
+
