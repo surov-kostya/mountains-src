@@ -5,15 +5,86 @@
     color: $color-gray;
 }
 
+
 .blog-section__left{
+    margin-right:5px;
     flex-basis:310px;
     text-align: right;
+    z-index:0;
+    transition: left .3s ease;
 
     @include tablets{
-        display:none;
+        position:fixed;
+        background-color:$color-green;
+        width:80vw;
+        top:0;
+        left:-80vw;
+        bottom:0;
+        box-shadow: 5px 5px 10px $color-gray-dark; 
+        display:flex;
+        flex-flow:column;
+        justify-content: flex-start;
+        align-items:flex-end;
+
+        &:hover{
+            left:0;
+        }
+    }
+
+    @include iphone{
+        width:75vw;
+        left:-75vw;
+    }
+    
+    
+
+    &:before{
+        @include tablets{
+            position: absolute;
+            right: -22px;
+            top:50%;
+            transform: translateY(-50%);
+            display: block;
+            content:'';
+            width:70px;
+            height: 70px;
+            background-color:$color-green;
+            border-radius:50%;
+            z-index:-2;
+            box-shadow: 4px 1px 5px $color-gray-dark;
+        }
+    }
+
+    &:after{
+        @include tablets{
+            position: absolute;
+            right: -20px;
+            top:50%;
+            transform: translateY(-50%);
+            display: block;
+            content:'';
+            width:80px;
+            height: 80px;
+            background-color:$color-green;
+            border-radius:50%;
+            z-index:-1;
+        }
     }
 }
 
+
+.blog-section__left_active{
+    @include tablets{
+        
+        left:0;
+    }
+}
+
+
 .blog-section__right{
     flex-basis:680px;
+
+    @include tablets{
+        margin-left: 25px;
+    }
 }

@@ -1,9 +1,20 @@
+.article-names{
+    @include tablets{
+        margin-top: 20px;
+        flex-basis: 50%;
+        display:flex;
+        flex-flow: column;
+        justify-content: flex-end;        
+    }
+
+}
 .article-names__item{
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
     padding: 15px 17px 15px 0;
+    margin:5px;
 
     &_active{
         border-right:3px solid $color-green;        
@@ -16,11 +27,19 @@
     &:hover{
         color: $color-gray-dark;
     }
+
+    @include tablets{
+        color: rgba(white, .7);
+    }
 }
 
 .article-names__item_active{
     .article-names__link{
         color: $color-green;
         font-weight: 700;
+
+        @include tablets{
+            color:white;            
+        }
     }    
 }

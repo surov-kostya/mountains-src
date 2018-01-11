@@ -10,6 +10,7 @@
 .fullscreen-menu__list{
     text-align:center;
     @include font-h2;
+    font-size:49px;
 }
 
 .fullscreen-menu__item{
@@ -24,9 +25,9 @@
         position: absolute;
         content:'';
         display: block;
-        width:15px;
+        width:22px;
         height: 5px;
-        background-color: rgba(white, .5);
+        background-color: rgba(white, .8);
         top:50%;
         transform: translateY(-50%);
         left: -30px;
@@ -37,9 +38,9 @@
         position: absolute;
         content:'';
         display: block;
-        width:15px;
+        width:22px;
         height: 5px;
-        background-color: rgba(white, .5);
+        background-color: rgba(white, .8);
         top:50%;
         transform: translateY(-50%);
         right: -30px;
