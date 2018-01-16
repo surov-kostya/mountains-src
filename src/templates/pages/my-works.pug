@@ -105,9 +105,9 @@ block content
                 .works-form__wrapper
                     .works-form__inputs
                         .works-form__title Связаться со мной
-                        input.works-form__name(type="text" placeholder="Имя")
-                        input.works-form__email(type="email" placeholder="Email")
-                        textarea.works-form__comment(placeholder="Ваше сообщение")
+                        input.works-form__name(type="text" placeholder="Имя" required pattern="[A-Z][A-Za-z' -]*")
+                        input.works-form__email(type="email" placeholder="Email" required)
+                        textarea.works-form__comment(placeholder="Ваше сообщение" required)
                     .works-form__controls
                         button.works-form__btn.works-form__btn_submit(type="submit") Отправить
                         button.works-form__btn.works-form__btn_reset(type="reset") Очистить

@@ -69,6 +69,22 @@ section{
 	width: 100%;
 }
 
+input, textarea{
+
+	&:invalid{
+		border: 1px solid $color-green;
+	}
+
+	&:valid{
+		border: 1px solid $color-gray;
+	}
+
+	&:focus{
+		outline:none;
+		border:1px solid $color-gray-dark;
+	}
+}
+
 .visually-hidden {
 	position: absolute;
 	clip: rect(0 0 0 0);
