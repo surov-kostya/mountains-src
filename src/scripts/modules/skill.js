@@ -14,13 +14,15 @@ if (document.querySelectorAll('.my-benefits__progress_filled') !== null){
     function fillGt50(i){
         progress[i].classList.add('my-benefits__progress_50');
 
-        setTimeout(()=>{
+
+        progress[i].addEventListener('transitionend', ()=>{
             emptyRight[i].style.borderRightColor = '#00bfa5';
             emptyRight[i].style.borderBottomColor = '#00bfa5';
             emptyRight[i].style.zIndex = '4';
             progress[i].classList.remove('my-benefits__progress_50');
             emptyLeft[i].classList.add('my-benefits__progress_' + (skillLevel - 50));
-        },5000);
+        });
+
         
     };
     

@@ -26,7 +26,5 @@
     "uglifyjs-webpack-plugin": "^1.1.2",
     "webpack": "^3.10.0"
   },
-  "dependencies": {
-    "epic-spinners": "^1.0.1"
-  }
+  "dependencies": {}
 }

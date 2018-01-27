@@ -1,0 +1,11 @@
+extends ../template 
+block title
+    title Добро пожаловать
+    - var page = 'message'
+block first-section
+block content
+    section.message
+      .message__frame
+        -var msg = ''
+        .message__text= msg
+        button.message__btn(type='button') Закрыть

@@ -6,7 +6,6 @@ const moveLayers = e =>{
     let k = 1;
 
     for(let i=0; i<firstParallaxLayers.length; i++){
-
         k = i*2;
         
         let finalY = initialY * 4 / k;
