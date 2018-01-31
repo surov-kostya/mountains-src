@@ -44,14 +44,14 @@
     padding: 0 20px;
 }
 
-.auth-form__human-check{
+.auth-form__human-check-title{
     position: relative;
     outline:none;
 
     &:before{
         position:absolute;
         left:-30px;
-        top:3px;
+        top:-2px;
         display:block;
         content:"";
         height:20px;
@@ -61,9 +61,9 @@
     }
 
     &:after{
-        position:absolute;
+        position: absolute;
         left:-26px;
-        top:7px;
+        top:2px;
         content:"";
         height:5px;
         width:10px;
@@ -74,12 +74,13 @@
         display:none;
     }
 
-    &:checked{
-        &:after{
-            display:block;
-        }
-    }
 }
+
+.auth-form__human-check:checked +.auth-form__human-check-title:after{
+    display:block;
+}
+
+
 
 .auth-form__question{
     font-weight: 500;
@@ -99,7 +100,7 @@
     &:before{
         position:absolute;
         left:-33px;
-        top:-1px;
+        top:-3px;
         display:block;
         content:"";
         height:20px;
@@ -112,7 +113,7 @@
     &:after{
         position:absolute;
         left:-26px;
-        top:6px;
+        top:4px;
         content:"";
         height:8px;
         width:8px;
